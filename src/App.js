@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // MAIN PAGES
 
 // import Home from './pages/Home';
-// import About from './pages/About';
+import About from "./pages/About";
 // import Academy from './pages/Academy';
 // import Careers from './pages/Careers';
 // import News from './pages/News';
@@ -23,20 +23,20 @@ import Footer from './components/Footer';
 // import Utility from './pages/services/utility';
 
 // PROJECT PAGES
-import Ded from './pages/projects/Ded';
-import Feed from './pages/projects/Feed';
-import Integrity from './pages/projects/integrity';
-import Lpg from './pages/projects/Lpg';
+import Ded from "./pages/projects/Ded";
+import Feed from "./pages/projects/Feed";
+import Integrity from "./pages/projects/integrity";
+import Lpg from "./pages/projects/Lpg";
 
 export default function App() {
-	return (
-		<Router>
-			<Header />
+  return (
+    <Router>
+      <Header />
 
-			<Routes>
-				{/* Main Routes */}
+      <Routes>
+        {/* Main Routes */}
 
-				{/* <Route
+        {/* <Route
 					path="/"
 					element={<Home />}
 				/>
@@ -61,9 +61,9 @@ export default function App() {
 					element={<Contact />}
 				/> */}
 
-				{/* Services Sub Routes */}
+        {/* Services Sub Routes */}
 
-				{/* <Route
+        {/* <Route
 					path="/services/gasdistribution"
 					element={<Gasdistribution />}
 				/>
@@ -96,27 +96,15 @@ export default function App() {
 					element={<Utility />}
 				/> */}
 
-				{/* Project Sub Routes */}
+        {/* Project Sub Routes */}
 
-				<Route
-					path="/projects/ded"
-					element={<Ded />}
-				/>
-				<Route
-					path="/projects/feed"
-					element={<Feed />}
-				/>
-				<Route
-					path="/projects/integrity"
-					element={<Integrity />}
-				/>
-				<Route
-					path="/projects/lpg"
-					element={<Lpg />}
-				/>
-			</Routes>
+        <Route path="/projects/ded" element={<Ded />} />
+        <Route path="/projects/feed" element={<Feed />} />
+        <Route path="/projects/integrity" element={<Integrity />} />
+        <Route path="/projects/lpg" element={<Lpg />} />
+      </Routes>
 
-			<Footer />
-		</Router>
-	);
+      <Footer />
+    </Router>
+  );
 }
