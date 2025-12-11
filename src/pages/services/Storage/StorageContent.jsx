@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import images at the top
-import gasPlantImg from '../../../assets/images/gasdistribution.png';
+import gasPlantImg from '../../../assets/images/storage.png';
 import consultantImg from '../../../assets/images/serviceContact.png';
 
 export default function StorageContent() {
@@ -17,21 +17,20 @@ export default function StorageContent() {
 						</h3>
 
 						<ul className="text-[16px] leading-[20px] text-[#ffffff] space-y-4">
-							<li>CNG Mother & Daughter Stations</li>
-							<li>Distribution Pipelines</li>
-							<li>Pressure Regulating & Metering Stations (PRMS)</li>
+							<li>Petroleum & White Product</li>
+							<li>Storage Tank</li>
+							<li>LPG Bulk Storage Facilities</li>
 							<li>LPG Terminals & Depots</li>
-							<li>Autogas & LPG Bottling Plants</li>
-							<li>White Product Terminals & Distribution</li>
-							<li>Automotive Fueling Stations</li>
-							<li>Utility & Safety Systems</li>
+							<li>Crude Oil & Condensate Tanks</li>
+							<li>Firewater & Utility Tanks</li>
+							<li>Integrated Tank Farms & Depots</li>
 						</ul>
 					</div>
 
 					{/* Need Help Box */}
 					<div className="bg-[#0C3B5A]/90 p-6 rounded-xl shadow-lg relative overflow-hidden w-full h-full flex flex-col justify-between">
 						<div
-							className="absolute inset-0  bg-cover bg-center"
+							className="absolute inset-0  bg-cover bg-top"
 							style={{ backgroundImage: `url(${consultantImg})` }}
 						></div>
 
@@ -68,29 +67,25 @@ export default function StorageContent() {
 					{/* Main Text Section */}
 					<div>
 						<h1 className="text-3xl lg:text-[40px] leading-[56px] font-extrabold text-[#ffffff] mb-4">
-							Gas Distribution & Terminals
+							Storage Facilities
 						</h1>
 						<div className="text-[18px] leading-[26px] text-[#ffffff] text-justify">
 							<p className=" mb-6">
-								The success of Nigeria’s Decade of Gas and downstream growth
-								depends on robust distribution and terminal infrastructure that
-								connects gas and petroleum products to industries, businesses,
-								and end-users. At Cozym Limited, we design and construct the
-								assets that move energy from processing plants to the
-								marketplace ensuring safe handling, reliable supply, and
-								compliance with regulatory standards.
+								Storage infrastructure is the backbone of oil and gas logistics,
+								ensuring that hydrocarbons and utilities are safely contained,
+								efficiently managed, and readily available for transportation or
+								consumption. At Cozym Limited, we design, engineer, and
+								construct storage facilities that comply with international
+								codes and Nigerian regulatory standards, providing clients with
+								safe, scalable, and durable solutions.
 							</p>
 
 							<p className=" mb-6">
-								Our scope spans CNG and LPG distribution systems, pipelines,
-								PRMS stations, storage depots, white product terminals, and
-								fueling stations.
-							</p>
-
-							<p className="">
-								These facilities enable investors and operators to expand market
-								penetration, enhance accessibility, and accelerate the
-								transition toward cleaner fuels.
+								Our portfolio spans petroleum tank farms, LPG bulk storage,
+								firewater tanks, utility tanks, and integrated depot facilities.
+								Whether part of a terminal, distribution hub, or standalone
+								project, we deliver storage systems that combine engineering
+								precision, operational safety, and long-term durability.
 							</p>
 						</div>
 					</div>

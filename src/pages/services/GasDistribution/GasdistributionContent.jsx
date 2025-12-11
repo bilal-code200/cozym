@@ -31,7 +31,7 @@ export default function GasDistributionContent() {
 					{/* Need Help Box */}
 					<div className="bg-[#0C3B5A]/90 p-6 rounded-xl shadow-lg relative overflow-hidden w-full h-full flex flex-col justify-between">
 						<div
-							className="absolute inset-0  bg-cover bg-center"
+							className="absolute inset-0  bg-cover bg-top"
 							style={{ backgroundImage: `url(${consultantImg})` }}
 						></div>
 

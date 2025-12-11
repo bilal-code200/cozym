@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import images at the top
-import gasPlantImg from '../../../assets/images/gasdistribution.png';
+import gasPlantImg from '../../../assets/images/procurement.png';
 import consultantImg from '../../../assets/images/serviceContact.png';
 
 export default function ProcurementContent() {
@@ -17,21 +17,17 @@ export default function ProcurementContent() {
 						</h3>
 
 						<ul className="text-[16px] leading-[20px] text-[#ffffff] space-y-4">
-							<li>CNG Mother & Daughter Stations</li>
-							<li>Distribution Pipelines</li>
-							<li>Pressure Regulating & Metering Stations (PRMS)</li>
-							<li>LPG Terminals & Depots</li>
-							<li>Autogas & LPG Bottling Plants</li>
-							<li>White Product Terminals & Distribution</li>
-							<li>Automotive Fueling Stations</li>
-							<li>Utility & Safety Systems</li>
+							<li>Delivering strategic supply chain solutions</li>
+							<li> Logistics coordination</li>
+							<li>Technical expertise </li>
+							<li>High-quality materials </li>
 						</ul>
 					</div>
 
 					{/* Need Help Box */}
 					<div className="bg-[#0C3B5A]/90 p-6 rounded-xl shadow-lg relative overflow-hidden w-full h-full flex flex-col justify-between">
 						<div
-							className="absolute inset-0  bg-cover bg-center"
+							className="absolute inset-0  bg-cover bg-top"
 							style={{ backgroundImage: `url(${consultantImg})` }}
 						></div>
 
@@ -68,29 +64,36 @@ export default function ProcurementContent() {
 					{/* Main Text Section */}
 					<div>
 						<h1 className="text-3xl lg:text-[40px] leading-[56px] font-extrabold text-[#ffffff] mb-4">
-							Gas Distribution & Terminals
+							Utility & Support Infrastructure
 						</h1>
 						<div className="text-[18px] leading-[26px] text-[#ffffff] text-justify">
 							<p className=" mb-6">
-								The success of Nigeria’s Decade of Gas and downstream growth
-								depends on robust distribution and terminal infrastructure that
-								connects gas and petroleum products to industries, businesses,
-								and end-users. At Cozym Limited, we design and construct the
-								assets that move energy from processing plants to the
-								marketplace ensuring safe handling, reliable supply, and
-								compliance with regulatory standards.
+								At Cozym Limited, we elevate procurement beyond sourcing by
+								delivering strategic supply chain solutions that power
+								efficient, high-performance project execution. With a robust
+								global network spanning the US, EU, and Asia, we procure
+								high-quality materials and specialized equipment that meet the
+								demanding standards of the oil and gas industry.
 							</p>
 
 							<p className=" mb-6">
-								Our scope spans CNG and LPG distribution systems, pipelines,
-								PRMS stations, storage depots, white product terminals, and
-								fueling stations.
+								From essential components such as valves, fittings, and line
+								pipes to complex, project-critical systems; including Early
+								Production Facilities (EPFs), gas processing units, liquefaction
+								modules, dehydration packages, LPG storage tanks, Pressure
+								Reduction and Metering Stations (PRMS), and compression skids,
+								we ensure every item is sourced with precision and compliance.
 							</p>
-
-							<p className="">
-								These facilities enable investors and operators to expand market
-								penetration, enhance accessibility, and accelerate the
-								transition toward cleaner fuels.
+							<p className=" mb-6">
+								Our procurement process is strengthened by rigorous vendor
+								qualification, transparent logistics coordination, and thorough
+								quality assurance, guaranteeing timely deliveries and seamless
+								integration into your projects. Whether you are building,
+								expanding, or optimizing operations, Cozym Limited provides the
+								reliability and technical expertise needed to keep your supply
+								chain running at peak performance. With Cozym as your
+								procurement partner, you gain more than equipment but trusted
+								extension of your project team.
 							</p>
 						</div>
 					</div>

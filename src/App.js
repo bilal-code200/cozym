@@ -5,11 +5,11 @@ import Footer from './components/Footer';
 
 // MAIN PAGES
 
-import Home from './pages/Home';
-// import About from './pages/About';
+import Home from './pages/HOME/Home';
+import About from './pages/About';
 // import Academy from './pages/Academy';
 // import Careers from './pages/Careers';
-// import News from './pages/News';
+import News from './pages/News';
 // import Contact from './pages/Contact';
 
 // SERVICE PAGES
@@ -48,26 +48,27 @@ export default function App() {
 					path="/"
 					element={<Home />}
 				/>
-				{/* <Route
+				<Route
 					path="/about"
 					element={<About />}
 				/>
-				<Route
+				{/* <Route
 					path="/academy"
 					element={<Academy />}
-				/>
-				<Route
+				/> */}
+
+				{/* <Route
 					path="/careers"
 					element={<Careers />}
-				/>
+				/> */}
 				<Route
 					path="/news"
 					element={<News />}
 				/>
-				<Route
+				{/* <Route
 					path="/contact"
 					element={<Contact />}
-				/>  */}
+				/>   */}
 
 				{/* Services Sub Routes */}
 

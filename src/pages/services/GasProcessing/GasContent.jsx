@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import images at the top
-import gasPlantImg from '../../../assets/images/gasprocessing.png';
+import gasPlantImg from '../../../assets/images/oil.png';
 import consultantImg from '../../../assets/images/serviceContact.png';
 
 export default function GasProcessingContent() {
@@ -26,7 +26,7 @@ export default function GasProcessingContent() {
 					{/* Need Help Box */}
 					<div className="bg-[#0C3B5A]/90 p-6 rounded-xl shadow-lg relative overflow-hidden w-full h-full flex flex-col justify-between">
 						<div
-							className="absolute inset-0  bg-cover bg-center"
+							className="absolute inset-0  bg-cover bg-top"
 							style={{ backgroundImage: `url(${consultantImg})` }}
 						></div>
 

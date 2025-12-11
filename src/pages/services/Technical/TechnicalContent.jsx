@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import images at the top
-import gasPlantImg from '../../../assets/images/gasdistribution.png';
+import gasPlantImg from '../../../assets/images/technical.png';
 import consultantImg from '../../../assets/images/serviceContact.png';
 
 export default function TechnicalContent() {
@@ -17,21 +17,17 @@ export default function TechnicalContent() {
 						</h3>
 
 						<ul className="text-[16px] leading-[20px] text-[#ffffff] space-y-4">
-							<li>CNG Mother & Daughter Stations</li>
-							<li>Distribution Pipelines</li>
-							<li>Pressure Regulating & Metering Stations (PRMS)</li>
-							<li>LPG Terminals & Depots</li>
-							<li>Autogas & LPG Bottling Plants</li>
-							<li>White Product Terminals & Distribution</li>
-							<li>Automotive Fueling Stations</li>
-							<li>Utility & Safety Systems</li>
+							<li>Safety and Compliance Training </li>
+							<li>Engineering Skill Development </li>
+							<li>Certification & Assessment Services </li>
+							<li>Technical Training</li>
 						</ul>
 					</div>
 
 					{/* Need Help Box */}
 					<div className="bg-[#0C3B5A]/90 p-6 rounded-xl shadow-lg relative overflow-hidden w-full h-full flex flex-col justify-between">
 						<div
-							className="absolute inset-0  bg-cover bg-center"
+							className="absolute inset-0  bg-cover bg-top"
 							style={{ backgroundImage: `url(${consultantImg})` }}
 						></div>
 
@@ -50,7 +46,7 @@ export default function TechnicalContent() {
 					</div>
 
 					<p className="text-[16px] leading-[20px] text-[#FAA419] font-medium">
-						Delivering Energy Safely, Efficiently, and at Scale
+						Empowering Project Excellence Through Engineering Knowledge.
 					</p>
 				</div>
 
@@ -72,25 +68,35 @@ export default function TechnicalContent() {
 						</h1>
 						<div className="text-[18px] leading-[26px] text-[#ffffff] text-justify">
 							<p className=" mb-6">
-								The success of Nigeria’s Decade of Gas and downstream growth
-								depends on robust distribution and terminal infrastructure that
-								connects gas and petroleum products to industries, businesses,
-								and end-users. At Cozym Limited, we design and construct the
-								assets that move energy from processing plants to the
-								marketplace ensuring safe handling, reliable supply, and
-								compliance with regulatory standards.
+								Cozym Limited’s Technical Training services equip your project
+								teams with the essential competencies required to excel across
+								every phase of Engineering, Procurement, Construction, and
+								Commissioning (EPCC). Our programs are designed to bridge
+								knowledge gaps, enhance operational efficiency, and ensure that
+								your workforce is fully aligned with global industry standards
+								and best practices.
 							</p>
 
 							<p className=" mb-6">
-								Our scope spans CNG and LPG distribution systems, pipelines,
-								PRMS stations, storage depots, white product terminals, and
-								fueling stations.
+								Our specialized programs cover core oil and gas disciplines,
+								ranging from design fundamentals and safety compliance to
+								construction best practices and asset commissioning ensuring
+								your workforce operates with precision and confidence. These
+								training modules are developed by seasoned industry
+								professionals who bring real project insight, field experience,
+								and technical depth to every session, offering participants a
+								blend of theory, simulation, and practical exposure.
 							</p>
 
 							<p className="">
-								These facilities enable investors and operators to expand market
-								penetration, enhance accessibility, and accelerate the
-								transition toward cleaner fuels.
+								Whether through hands-on site training or advanced technical
+								workshops, we tailor every module to your project requirements.
+								Each session is structured to address specific operational
+								challenges, emerging technologies, and evolving regulatory
+								expectations within the EPCC landscape. This personalized
+								approach ensures that your team not only gains knowledge but
+								also understands how to apply it effectively in real-world
+								project environments.
 							</p>
 						</div>
 					</div>
