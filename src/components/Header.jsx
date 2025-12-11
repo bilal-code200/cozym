@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Mainicon from "../assets/icons/mainicon.svg";
 import {
   FaMapMarkerAlt,
@@ -16,11 +16,16 @@ export default function Header() {
   const [serviceOpen, setServiceOpen] = useState(false);
   const [projectOpen, setProjectOpen] = useState(false);
 
+  // Detect active path
+  const { pathname } = useLocation();
+  const isServiceActive = pathname.startsWith("/services");
+  const isProjectActive = pathname.startsWith("/projects");
+
   return (
-    <header className="w-full ">
+    <header className="w-full">
       {/* TOP BAR */}
-      <div className="bg-[#002b45] ">
-        <div className=" text-[#FFFFFF] text-[12px] font-medium py-2 px-[80px]  max-w-[1100px] mx-auto  flex justify-between items-center">
+      <div className="bg-[#002b45]">
+        <div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[80px] max-w-[1100px] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt size={14} />
             <span>
@@ -77,8 +82,8 @@ export default function Header() {
       </div>
 
       {/* NAV BAR */}
-      <div className="bg-white ">
-        <div className="py-[25px] px-[40px]  max-w-[1400px] mx-auto flex justify-between items-center gap-6 relative">
+      <div className="bg-white">
+        <div className="py-[25px] px-[40px] max-w-[1400px] mx-auto flex justify-between items-center gap-6 relative">
           {/* Logo */}
           <Link to="/">
             <img src={Mainicon} alt="logo" />
@@ -86,11 +91,23 @@ export default function Header() {
 
           <nav>
             <ul className="flex items-center gap-6 text-[#002b45] font-semibold">
-              <NavLink to="/" className="hover:text-[#FAA419]">
+              {/* HOME */}
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
                 Home
               </NavLink>
 
-              <NavLink to="/about" className="hover:text-[#FAA419]">
+              {/* ABOUT */}
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
                 About
               </NavLink>
 
@@ -100,7 +117,11 @@ export default function Header() {
                 onMouseEnter={() => setServiceOpen(true)}
                 onMouseLeave={() => setServiceOpen(false)}
               >
-                <span className="flex items-center gap-1 hover:text-[#FAA419] cursor-pointer">
+                <span
+                  className={`flex items-center gap-1 cursor-pointer ${
+                    isServiceActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                  }`}
+                >
                   Services{" "}
                   {serviceOpen ? (
                     <FaChevronUp size={12} />
@@ -169,7 +190,11 @@ export default function Header() {
                 onMouseEnter={() => setProjectOpen(true)}
                 onMouseLeave={() => setProjectOpen(false)}
               >
-                <span className="flex items-center gap-1 hover:text-[#FAA419] cursor-pointer">
+                <span
+                  className={`flex items-center gap-1 cursor-pointer ${
+                    isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                  }`}
+                >
                   Projects{" "}
                   {projectOpen ? (
                     <FaChevronUp size={12} />
@@ -211,19 +236,40 @@ export default function Header() {
                 )}
               </div>
 
-              <NavLink to="/academy" className="hover:text-[#FAA419]">
+              {/* OTHER LINKS */}
+              <NavLink
+                to="/academy"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
                 Academy
               </NavLink>
 
-              <NavLink to="/careers" className="hover:text-[#FAA419]">
+              <NavLink
+                to="/careers"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
                 Careers
               </NavLink>
 
-              <NavLink to="/news" className="hover:text-[#FAA419]">
+              <NavLink
+                to="/news"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
                 News
               </NavLink>
 
-              <NavLink to="/contact" className="hover:text-[#FAA419]">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
                 Contacts
               </NavLink>
             </ul>
