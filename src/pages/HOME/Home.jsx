@@ -6,6 +6,12 @@ import SectionTwo from './sectionTwo';
 import Key from '../ABOUT/key';
 import HomeKey from './homeKey';
 import HomeServiceSection from './homeServiceSection';
+import ImageSliderSection from './imageSliderSection';
+import TrainingCapacity from './trainingCapacity';
+import CaseStudies from './case-studies';
+import WhyPartnerWithCozym from './why-partner';
+import ClientMarquee from './ClientMarquee';
+import TestimonialSlider from './testimonial';
 
 export default function Home() {
 	const [index, setIndex] = useState(0);
@@ -20,15 +26,20 @@ export default function Home() {
 
 	return (
 		<>
-			<div className="relative w-full h-[calc(100vh-100px)]  overflow-hidden">
+			<div className="relative w-full h-[calc(100vh-100px)] font-Montserrat  overflow-hidden">
 				<SlideOne active={index === 0} />
 				<SlideTwo active={index === 1} />
 				<SlideThree active={index === 2} />
 			</div>
-			<div>
+			<div className="font-Montserrat">
 				<SectionTwo />
 				<HomeKey />
 				<HomeServiceSection />
+				<TrainingCapacity />
+				<CaseStudies />
+				<WhyPartnerWithCozym />
+				<TestimonialSlider />
+				<ClientMarquee />
 			</div>
 		</>
 	);

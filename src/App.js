@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import Home from './pages/HOME/Home';
 import About from './pages/About';
 // import Academy from './pages/Academy';
-// import Careers from './pages/Careers';
+import Careers from './pages/Careers';
 import News from './pages/News';
 import Contact from './pages/Contact';
 
@@ -57,13 +57,13 @@ export default function App() {
 				{/* <Route
 					path="/academy"
 					element={<Academy />}
-				/>
-        
+				/> */}
+
 				<Route
 					path="/careers"
 					element={<Careers />}
 				/>
-        */}
+
 				<Route
 					path="/news"
 					element={<News />}

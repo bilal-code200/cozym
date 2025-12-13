@@ -84,32 +84,35 @@ export default function HomeServiceSection() {
 
 	return (
 		<div className="w-full py-16 bg-white">
-			<div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+			<p className="text-[36px] mb-[42px] px-[130px] leading-[43px] font-semibold text-[#002B45]">
+				Our Services
+			</p>
+			<div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-[100px] px-4">
 				{cards.map((card, i) => (
 					<div
 						key={i}
-						className="bg-white rounded-xl shadow-md border border-gray-100 flex flex-col overflow-hidden"
+						className="bg-white rounded-xl  flex flex-col overflow-hidden"
 					>
 						{/* Image */}
 						<img
 							src={card.img}
 							alt={card.title}
-							className="h-44 w-full object-cover"
+							className="w-full object-cover bg-center"
 						/>
 
 						{/* Content */}
-						<div className="flex flex-col p-6 flex-grow">
-							<h3 className="text-xl font-semibold text-[#07355A] mb-3">
+						<div className="flex flex-col mt-5  px-7 py-7 flex-grow border-2 border-[#E7E7E7] rounded-lg ">
+							<h3 className="text-[24px] leading-[28px] font-semibold text-[#002B45] mb-5">
 								{card.title}
 							</h3>
 
-							<p className="text-gray-600 text-sm leading-relaxed mb-4">
+							<p className="text-[#666666] text-[16px] leading-[24px] mb-4">
 								{card.desc}
 							</p>
 
 							{/* Bullet list */}
 							{card.list.length > 0 && (
-								<ul className="text-gray-700 text-sm space-y-2 mb-6">
+								<ul className="text-[#666666] text-[16px] leading-[24px] space-y-2 mb-6">
 									{card.list.map((item, index) => (
 										<li
 											key={index}

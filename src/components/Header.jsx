@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Mainicon from '../assets/icons/mainicon.svg';
 import {
 	FaMapMarkerAlt,
@@ -15,6 +15,7 @@ import {
 export default function Header() {
 	const [serviceOpen, setServiceOpen] = useState(false);
 	const [projectOpen, setProjectOpen] = useState(false);
+	const navigate = useNavigate();
 
 	// Detect active path
 	const { pathname } = useLocation();
@@ -22,7 +23,7 @@ export default function Header() {
 	const isProjectActive = pathname.startsWith('/projects');
 
 	return (
-		<header className="w-full">
+		<header className="w-full font-Montserrat">
 			{/* TOP BAR */}
 			<div className="bg-[#002b45]">
 				<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[80px] max-w-[1100px] mx-auto flex justify-between items-center">
@@ -214,7 +215,7 @@ export default function Header() {
 								</span>
 
 								{projectOpen && (
-									<div className="absolute top-6 left-0 bg-white shadow-lg rounded w-[350px] py-2 z-20">
+									<div className="absolute top-6 left-0 bg-white shadow-lg rounded w-[350px] py-2 z-50">
 										<NavLink
 											to="/projects/lpg"
 											className="block px-4 py-2 hover:bg-gray-100"
@@ -247,14 +248,25 @@ export default function Header() {
 							</div>
 
 							{/* OTHER LINKS */}
-							<NavLink
-								to="/academy"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
+							<span
+								onClick={() => {
+									if (pathname === '/') {
+										document
+											.getElementById('training-capacity')
+											?.scrollIntoView({ behavior: 'smooth' });
+									} else {
+										navigate('/');
+										setTimeout(() => {
+											document
+												.getElementById('training-capacity')
+												?.scrollIntoView({ behavior: 'smooth' });
+										}, 100);
+									}
+								}}
+								className="hover:text-[#FAA419] cursor-pointer"
 							>
 								Academy
-							</NavLink>
+							</span>
 
 							<NavLink
 								to="/careers"
