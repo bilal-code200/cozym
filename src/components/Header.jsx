@@ -1,296 +1,280 @@
-import React, { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import Mainicon from '../assets/icons/mainicon.svg';
-import {
-	FaMapMarkerAlt,
-	FaEnvelope,
-	FaTwitter,
-	FaFacebookF,
-	FaLinkedinIn,
-	FaInstagram,
-	FaChevronDown,
-	FaChevronUp,
-} from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import Mainicon from "../assets/icons/footericon.svg";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-export default function Header() {
-	const [serviceOpen, setServiceOpen] = useState(false);
-	const [projectOpen, setProjectOpen] = useState(false);
+export default function Header2() {
+  const [serviceOpen, setServiceOpen] = useState(false);
+  const [projectOpen, setProjectOpen] = useState(false);
 
-	// Detect active path
-	const { pathname } = useLocation();
-	const isServiceActive = pathname.startsWith('/services');
-	const isProjectActive = pathname.startsWith('/projects');
+  // Detect active path
+  const { pathname } = useLocation();
+  const isServiceActive = pathname.startsWith("/services");
+  const isProjectActive = pathname.startsWith("/projects");
 
-	return (
-		<header className="w-full">
-			{/* TOP BAR */}
-			<div className="bg-[#002b45]">
-				<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[80px] max-w-[1100px] mx-auto flex justify-between items-center">
-					<div className="flex items-center gap-2">
-						<FaMapMarkerAlt size={14} />
-						<span>
-							Plot 2, Block 115, Ayo Babatunde Crescent, Off Oniru New Market
-							Road, Lekki, Lagos State, Nigeria
-						</span>
-					</div>
+  return (
+    <header className="w-full">
+      {/* NAV BAR */}
+      <div className=" w-full absolute top-0 left-0 z-50">
+        <div className="py-[25px] px-[100px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative">
+          {/* Logo */}
+          <div className=" h-[53px] w-[210px] ">
+            <Link to="/">
+              <img src={Mainicon} alt="logo" className=" " />
+            </Link>
+          </div>
 
-					<div className="flex items-center gap-28">
-						<div className="flex items-center gap-2">
-							<FaEnvelope size={14} />
-							<span>cozym@cozymtld.com</span>
-						</div>
+          <nav>
+            <ul className="flex items-center gap-6 text-[#ffffff] font-semibold">
+              {/* HOME */}
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
+                Home
+              </NavLink>
 
-						<div className="flex gap-4">
-							<a
-								href="https://twitter.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaTwitter size={14} />
-							</a>
+              {/* ABOUT */}
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
+                About
+              </NavLink>
 
-							<a
-								href="https://facebook.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaFacebookF size={14} />
-							</a>
+              {/* SERVICES DROPDOWN */}
+              <div
+                className="relative"
+                onMouseEnter={() => setServiceOpen(true)}
+                onMouseLeave={() => setServiceOpen(false)}
+              >
+                <span
+                  className={`flex items-center gap-1 cursor-pointer ${
+                    isServiceActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                  }`}
+                >
+                  Services{" "}
+                  {serviceOpen ? (
+                    <FaChevronUp size={12} />
+                  ) : (
+                    <FaChevronDown size={12} />
+                  )}
+                </span>
 
-							<a
-								href="https://linkedin.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaLinkedinIn size={14} />
-							</a>
+                {serviceOpen && (
+                  <div className="absolute top-6 left-0 bg-white/10 backdrop-blur-[10px] shadow-lg rounded w-[350px] py-6 z-50">
+                    <NavLink
+                      to="/services/oilngas"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Oil & Gas Production Facilities
+                    </NavLink>
 
-							<a
-								href="https://instagram.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaInstagram size={14} />
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+                    <NavLink
+                      to="/services/gasprocessing"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Gas Processing & Conditioning
+                    </NavLink>
 
-			{/* NAV BAR */}
-			<div className="bg-white">
-				<div className="py-[25px] px-[40px] max-w-[1400px] mx-auto flex justify-between items-center gap-6 relative">
-					{/* Logo */}
-					<Link to="/">
-						<img
-							src={Mainicon}
-							alt="logo"
-						/>
-					</Link>
+                    <NavLink
+                      to="/services/gasdistribution"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Gas Distribution & Terminals
+                    </NavLink>
+                    <br />
 
-					<nav>
-						<ul className="flex items-center gap-6 text-[#002b45] font-semibold">
-							{/* HOME */}
-							<NavLink
-								to="/"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
-							>
-								Home
-							</NavLink>
+                    <NavLink
+                      to="/services/pipeline"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Pipelines & Distribution Networks
+                    </NavLink>
 
-							{/* ABOUT */}
-							<NavLink
-								to="/about"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
-							>
-								About
-							</NavLink>
+                    <NavLink
+                      to="/services/technical"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Technical Training
+                    </NavLink>
+                    <br />
 
-							{/* SERVICES DROPDOWN */}
-							<div
-								className="relative"
-								onMouseEnter={() => setServiceOpen(true)}
-								onMouseLeave={() => setServiceOpen(false)}
-							>
-								<span
-									className={`flex items-center gap-1 cursor-pointer ${
-										isServiceActive ? 'text-[#FAA419]' : 'hover:text-[#FAA419]'
-									}`}
-								>
-									Services{' '}
-									{serviceOpen ? (
-										<FaChevronUp size={12} />
-									) : (
-										<FaChevronDown size={12} />
-									)}
-								</span>
+                    <NavLink
+                      to="/services/storage"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Storage Facilities
+                    </NavLink>
 
-								{serviceOpen && (
-									<div className="absolute top-6 left-0 bg-white shadow-lg rounded w-[350px] py-2 z-50">
-										<NavLink
-											to="/services/oilngas"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Oil & Gas Production Facilities
-										</NavLink>
+                    <NavLink
+                      to="/services/utility"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Utility & Support Infrastructure
+                    </NavLink>
 
-										<NavLink
-											to="/services/gasprocessing"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Gas Processing & Conditioning
-										</NavLink>
+                    <NavLink
+                      to="/services/procurement"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Procurement Services
+                    </NavLink>
+                  </div>
+                )}
+              </div>
 
-										<NavLink
-											to="/services/gasdistribution"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Gas Distribution & Terminals
-										</NavLink>
+              {/* PROJECTS DROPDOWN */}
+              <div
+                className="relative"
+                onMouseEnter={() => setProjectOpen(true)}
+                onMouseLeave={() => setProjectOpen(false)}
+              >
+                <span
+                  className={`flex items-center gap-1 cursor-pointer ${
+                    isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                  }`}
+                >
+                  Projects{" "}
+                  {projectOpen ? (
+                    <FaChevronUp size={12} />
+                  ) : (
+                    <FaChevronDown size={12} />
+                  )}
+                </span>
 
-										<NavLink
-											to="/services/pipeline"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Pipelines & Distribution Networks
-										</NavLink>
+                {projectOpen && (
+                  <div className="absolute top-6 left-0 bg-white/10 backdrop-blur-[10px] shadow-lg rounded w-[350px] py-6 z-20">
+                    <NavLink
+                      to="/projects/lpg"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      LPG Storage & Distribution Terminal
+                    </NavLink>
 
-										<NavLink
-											to="/services/technical"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Technical Training
-										</NavLink>
+                    <NavLink
+                      to="/projects/feed"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      FEED — 1.6 km LPG Onshore Pipeline
+                    </NavLink>
 
-										<NavLink
-											to="/services/storage"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Storage Facilities
-										</NavLink>
+                    <NavLink
+                      to="/projects/ded"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      DED — 18 km Onshore Gas Distribution
+                    </NavLink>
 
-										<NavLink
-											to="/services/utility"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Utility & Support Infrastructure
-										</NavLink>
+                    <NavLink
+                      to="/projects/integrity"
+                      className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
+                    >
+                      Integrity Assessment & FEED
+                    </NavLink>
+                  </div>
+                )}
+              </div>
 
-										<NavLink
-											to="/services/procurement"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Procurement Services
-										</NavLink>
-									</div>
-								)}
-							</div>
+              {/* OTHER LINKS */}
+              <NavLink
+                to="/academy"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
+                Academy
+              </NavLink>
 
-							{/* PROJECTS DROPDOWN */}
-							<div
-								className="relative"
-								onMouseEnter={() => setProjectOpen(true)}
-								onMouseLeave={() => setProjectOpen(false)}
-							>
-								<span
-									className={`flex items-center gap-1 cursor-pointer ${
-										isProjectActive ? 'text-[#FAA419]' : 'hover:text-[#FAA419]'
-									}`}
-								>
-									Projects{' '}
-									{projectOpen ? (
-										<FaChevronUp size={12} />
-									) : (
-										<FaChevronDown size={12} />
-									)}
-								</span>
+              <NavLink
+                to="/careers"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
+                Careers
+              </NavLink>
 
-								{projectOpen && (
-									<div className="absolute top-6 left-0 bg-white shadow-lg rounded w-[350px] py-2 z-20">
-										<NavLink
-											to="/projects/lpg"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											LPG Storage & Distribution Terminal
-										</NavLink>
+              <NavLink
+                to="/news"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
+                News
+              </NavLink>
 
-										<NavLink
-											to="/projects/feed"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											FEED — 1.6 km LPG Onshore Pipeline
-										</NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+              >
+                Contacts
+              </NavLink>
+            </ul>
+          </nav>
 
-										<NavLink
-											to="/projects/ded"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											DED — 18 km Onshore Gas Distribution
-										</NavLink>
-
-										<NavLink
-											to="/projects/integrity"
-											className="block px-4 py-2 hover:bg-gray-100"
-										>
-											Integrity Assessment & FEED
-										</NavLink>
-									</div>
-								)}
-							</div>
-
-							{/* OTHER LINKS */}
-							<NavLink
-								to="/academy"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
-							>
-								Academy
-							</NavLink>
-
-							<NavLink
-								to="/careers"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
-							>
-								Careers
-							</NavLink>
-
-							<NavLink
-								to="/news"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
-							>
-								News
-							</NavLink>
-
-							<NavLink
-								to="/contact"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
-							>
-								Contacts
-							</NavLink>
-						</ul>
-					</nav>
-
-					{/* Download Button */}
-					<button className="bg-[#002b45] text-white px-[50px] py-[15px] rounded">
-						Download Our Profile
-					</button>
-				</div>
-			</div>
-		</header>
-	);
+          {/* Download Button */}
+          <div>
+            <button className="bg-[#FAA419] text-white px-[25px] py-[10px] rounded">
+              Download Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
