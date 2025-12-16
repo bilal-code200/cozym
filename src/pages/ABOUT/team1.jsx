@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Kazeem from "../../assets/images/kazeem.png";
 import Chidinma from "../../assets/images/chidinma.png";
 import Abiodun from "../../assets/images/abiodun.png";
@@ -74,10 +74,41 @@ export default function ManagementSlider() {
   const [index, setIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
   const [autoSlide, setAutoSlide] = useState(true);
+  const [displayedName, setDisplayedName] = useState(team[0].name);
+  const [isInitial, setIsInitial] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
 
   const person = team[index];
 
-  /* 
+  /*
+   INTERSECTION OBSERVER FOR SCROLL DETECTION
+  */
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (isInitial) {
+            setIsInitial(false);
+          }
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [isInitial]);
+
+  /*
    AUTO SLIDE (PAUSES IF expanded = true)
   */
   useEffect(() => {
@@ -86,10 +117,32 @@ export default function ManagementSlider() {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % team.length);
       setExpanded(false);
-    }, 4000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [autoSlide]); // re-run only when autoSlide changes
+
+  /*
+   TYPEWRITER ANIMATION FOR NAME
+  */
+  useEffect(() => {
+    if (!isVisible || isInitial) return;
+    let currentName = "";
+    setDisplayedName("");
+    const fullName = person.name;
+    let i = 0;
+    const typeInterval = setInterval(() => {
+      if (i < fullName.length) {
+        currentName += fullName[i];
+        setDisplayedName(currentName);
+        i++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, 150); // adjust speed here
+
+    return () => clearInterval(typeInterval);
+  }, [index, isVisible, isInitial]);
 
   const toggleExpanded = () => {
     setExpanded((prev) => {
@@ -100,7 +153,7 @@ export default function ManagementSlider() {
   };
 
   return (
-    <div className="w-full flex flex-col items-center py-10">
+    <div ref={ref} className="w-full flex flex-col items-center py-10">
       {/* Title */}
       <div className="text-center mb-16 mt-4">
         <p className="text-[#FAA419] text-[48px] leading-none">Our</p>
@@ -128,7 +181,7 @@ export default function ManagementSlider() {
           {/* Card */}
           <div className="bg-[#ffffff] text-[#002B45] mt-[-120px] pt-[130px] pb-[50px] px-[60px] rounded-xl shadow-lg w-full relative z-10">
             <h3 className="text-center text-[32px] font-semibold">
-              {person.name}
+              {displayedName}
             </h3>
             <p className="text-center font-semibold text-[16px] text-[#FAA419] mb-4">
               {person.role}

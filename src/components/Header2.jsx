@@ -11,6 +11,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Header() {
   const [serviceOpen, setServiceOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Header() {
     >
       {/* TOP BAR */}
       <div className={`${isHome ? "bg-black/50" : "bg-[#002b45]"}`}>
-        <div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[80px] max-w-[1200px] mx-auto flex justify-between items-center">
+        <div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[20px] md:px-[40px] lg:px-[80px] max-w-[1200px] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt size={14} />
             <span>
@@ -51,7 +52,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="hover:text-[#FAA419]"
               >
-                <FaTwitter size={14} />
+                <FaXTwitter size={14} />
               </a>
 
               <a
@@ -87,11 +88,15 @@ export default function Header() {
 
       {/* NAV BAR */}
       <div className={`${isHome ? "bg-black/30" : "bg-white"} bg-contain`}>
-        <div className="py-[25px] px-[100px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative">
+        <div className="py-[25px] px-[20px] md:px-[60px] lg:px-[80px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative">
           {/* Logo */}
-          <div className=" h-[53px] w-[210px] ">
+          <div className=" h-[40px] md:h-[53px] w-[150px] md:w-[210px] ">
             <Link to="/">
-              <img src={Mainicon} alt="logo" className=" " />
+              <img
+                src={Mainicon}
+                alt="logo"
+                className="w-full h-full object-contain"
+              />
             </Link>
           </div>
 

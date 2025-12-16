@@ -6,7 +6,7 @@ import vision from "../../assets/icons/vision.svg";
 import mission from "../../assets/icons/mission.svg";
 import values from "../../assets/icons/value.svg";
 
-export default function CompanySlider() {
+export default function Vision() {
   const [page, setPage] = useState(0);
 
   const nextPage = () => setPage((p) => Math.min(p + 1, 1));
@@ -20,8 +20,8 @@ export default function CompanySlider() {
         style={{ transform: `translateX(-${page * 100}%)` }}
       >
         {/* SLIDE 1 */}
-        <div className="w-full flex-none flex items-center ">
-          <div className="grid grid-cols-2 gap-28 max-w-[1400px]  mx-auto  ">
+        <div className="w-full flex-none flex items-center px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28 max-w-[1400px] mx-auto">
             {/* Vision */}
             <div className="space-y-3">
               <h2 className="text-[48px] font-extrabold text-[#FAA419] flex items-center gap-4">
