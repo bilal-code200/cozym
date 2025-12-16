@@ -1,7 +1,7 @@
 export default function CardSection() {
   return (
     <div className="w-full flex justify-center bg-[#ffffff] py-10">
-      <div className="max-w-[1100px] w-full grid grid-cols-3 gap-6 ">
+      <div className="max-w-[1370px] mx-auto px-[100px] w-full grid grid-cols-3 gap-6 ">
         {/* ABOUT */}
         <div className="bg-[#012A42] text-[#ffffff] p-6 rounded-md text-[16px] font-semibold">
           <h3 className="text-[#FAA419] font-bold text-[30px] mb-3">About</h3>

@@ -2,8 +2,8 @@ import MapPreview from "../../assets/back/mapbg.png";
 
 export default function Map() {
   return (
-    <div className="w-full flex justify-center py-10 bg-white">
-      <div className="max-w-[1100px] w-full bg-[#F8F7F1] rounded-lg grid grid-cols-2 overflow-hidden">
+    <div className="w-full flex justify-center py-10 bg-white max-w-[1370px] mx-auto px-[100px]">
+      <div className="  w-full bg-[#F8F7F1] rounded-lg grid grid-cols-2 overflow-hidden">
         {/* LEFT — MAP WITH IMAGE OVERLAY */}
         <div className="w-full relative h-[500px]">
           {/* MAP */}

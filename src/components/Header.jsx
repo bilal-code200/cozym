@@ -16,14 +16,14 @@ export default function Header2() {
 		<header className="w-full">
 			{/* NAV BAR */}
 			<div className=" w-full absolute top-0 left-0 z-50">
-				<div className="py-[25px] px-[100px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative">
+				<div className="py-[25px] px-[20px] md:px-[60px] lg:px-[80px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative">
 					{/* Logo */}
-					<div className=" h-[53px] w-[210px] ">
+					<div className=" h-[40px] md:h-[53px] w-[150px] md:w-[210px] ">
 						<Link to="/">
 							<img
 								src={Mainicon}
 								alt="logo"
-								className=" "
+								className="w-full h-full object-contain"
 							/>
 						</Link>
 					</div>
@@ -73,7 +73,7 @@ export default function Header2() {
 									<div className="absolute top-6 left-0 bg-white/10 backdrop-blur-[10px] shadow-lg rounded w-[350px] py-6 z-50">
 										<NavLink
 											to="/services/oilngas"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -84,7 +84,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/services/gasprocessing"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -95,7 +95,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/services/gasdistribution"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -107,7 +107,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/services/pipeline"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -118,7 +118,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/services/technical"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -130,7 +130,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/services/storage"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -141,7 +141,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/services/utility"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -152,7 +152,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/services/procurement"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
                                   after:transition-all after:duration-300
@@ -187,7 +187,7 @@ export default function Header2() {
 									<div className="absolute top-6 left-0 bg-white/10 backdrop-blur-[10px] shadow-lg rounded w-[350px] py-6 z-20">
 										<NavLink
 											to="/projects/lpg"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                    after:content-[''] after:absolute after:left-0 after:-bottom-1
                                    after:h-[2px] after:w-0 after:bg-[#FAA419]
                                    after:transition-all after:duration-300
@@ -198,7 +198,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/projects/feed"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                    after:content-[''] after:absolute after:left-0 after:-bottom-1
                                    after:h-[2px] after:w-0 after:bg-[#FAA419]
                                    after:transition-all after:duration-300
@@ -209,7 +209,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/projects/ded"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                    after:content-[''] after:absolute after:left-0 after:-bottom-1
                                    after:h-[2px] after:w-0 after:bg-[#FAA419]
                                    after:transition-all after:duration-300
@@ -220,7 +220,7 @@ export default function Header2() {
 
 										<NavLink
 											to="/projects/integrity"
-											className="relative inline-block px-4 py-2 text-[#ffffff60]
+											className="relative inline-block px-4 pt-4 text-[#ffffff99]
                                    after:content-[''] after:absolute after:left-0 after:-bottom-1
                                    after:h-[2px] after:w-0 after:bg-[#FAA419]
                                    after:transition-all after:duration-300
