@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 // IMPORT IMAGES HERE
 import slide1 from '../../assets/images/train1.png';
@@ -209,7 +210,7 @@ export default function TrainingCapacity() {
 								/>
 							</div>
 							<p className="flex justify-center items-center text-[20px] font-semibold pt-5">
-								100% Certification{' '}
+								Certification{' '}
 							</p>
 						</div>
 
@@ -233,9 +234,13 @@ export default function TrainingCapacity() {
 								))}
 							</ul>
 
-							<button className="mt-8 bg-[#FAA419] hover:bg-orange-400 text-white px-[45px] py-3 rounded-md font-semibold w-fit">
+							<Link
+								to="/careers"
+								className="mt-8 bg-[#FAA419] hover:bg-orange-400 text-white px-[45px] py-3 rounded-md font-semibold w-fit inline-block text-center transition-colors duration-200"
+								aria-label="Join Cozym Academy for training and capacity development"
+							>
 								Join Us
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>

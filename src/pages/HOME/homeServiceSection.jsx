@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+import bgImage from '../../assets/images/ssbg.png';
 import img1 from '../../assets/images/ser1.png';
 import img2 from '../../assets/images/ser2.png';
 import img3 from '../../assets/images/ser3.png';
@@ -11,6 +12,10 @@ import img7 from '../../assets/images/ser7.png';
 import img8 from '../../assets/images/ser8.png';
 
 export default function HomeServiceSection() {
+	const sectionRef = useRef(null);
+	const [isVisible, setIsVisible] = useState(false);
+	const [animatedCards, setAnimatedCards] = useState([]);
+
 	const cards = [
 		{
 			img: img1,
@@ -82,60 +87,118 @@ export default function HomeServiceSection() {
 		},
 	];
 
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setIsVisible(true);
+					// Animate cards with varied staggered delays and patterns
+					cards.forEach((_, index) => {
+						setTimeout(() => {
+							setAnimatedCards(prev => [...prev, index]);
+						}, index * 200); // 200ms delay between each card for more dramatic effect
+					});
+				}
+			},
+			{ threshold: 0.1 }
+		);
+
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
+
+		return () => {
+			if (sectionRef.current) {
+				observer.unobserve(sectionRef.current);
+			}
+		};
+	}, []);
+
+	// Function to get staggered animation delay
+	const getAnimationDelay = index => {
+		return `${index * 300}ms`; // 300ms delay between each card
+	};
+
 	return (
-		<div className="w-full py-16 bg-white">
-			<p className="text-[36px] mb-[42px] px-[130px] leading-[43px] font-semibold text-[#002B45]">
-				Our Services
-			</p>
-			<div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-[100px] px-4">
-				{cards.map((card, i) => (
-					<div
-						key={i}
-						className="bg-white rounded-xl  flex flex-col overflow-hidden"
-					>
-						{/* Image */}
-						<img
-							src={card.img}
-							alt={card.title}
-							className="w-full object-cover bg-center"
-						/>
+		<div
+			ref={sectionRef}
+			className="w-full py-16"
+			style={{
+				backgroundImage: `url(${bgImage})`,
+				backgroundSize: 'cover',
+				backgroundPosition: 'center',
+				backgroundRepeat: 'no-repeat',
+			}}
+		>
+			<div className="max-w-7xl mx-auto px-4">
+				<div className=" mb-[42px]">
+					<p className="text-[36px] leading-[43px] font-semibold text-[#002B45] inline-block">
+						Our Services
+					</p>
+				</div>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-[100px]">
+					{cards.map((card, i) => (
+						<div
+							key={i}
+							className={`bg-white rounded-xl flex flex-col overflow-hidden transition-all duration-700 ease-out cursor-pointer group relative
+								${
+									animatedCards.includes(i)
+										? 'opacity-100 translate-y-0'
+										: 'opacity-0 translate-y-8'
+								}
+								hover:scale-105 transform-gpu`}
+							style={{
+								transitionDelay: animatedCards.includes(i)
+									? getAnimationDelay(i)
+									: '0ms',
+							}}
+						>
+							{/* Image */}
+							<div className="overflow-hidden">
+								<img
+									src={card.img}
+									alt={card.title}
+									className="w-full object-cover bg-center transition-transform duration-300 group-hover:scale-105"
+								/>
+							</div>
 
-						{/* Content */}
-						<div className="flex flex-col mt-5  px-7 py-7 flex-grow border-2 border-[#E7E7E7] rounded-lg ">
-							<h3 className="text-[24px] leading-[28px] font-semibold text-[#002B45] mb-5">
-								{card.title}
-							</h3>
+							{/* Content */}
+							<div className="flex flex-col mt-5 px-7 py-7 bg-transparent flex-grow border-2 border-[#E7E7E7] rounded-lg">
+								<h3 className="text-[24px] leading-[28px] font-semibold text-[#002B45] mb-5 transition-all duration-500 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:transform group-hover:scale-105">
+									{card.title}
+								</h3>
 
-							<p className="text-[#666666] text-[16px] leading-[24px] mb-4">
-								{card.desc}
-							</p>
+								<p className="text-[#666666] text-[16px] leading-[24px] mb-4">
+									{card.desc}
+								</p>
 
-							{/* Bullet list */}
-							{card.list.length > 0 && (
-								<ul className="text-[#666666] text-[16px] leading-[24px] space-y-2 mb-6">
-									{card.list.map((item, index) => (
-										<li
-											key={index}
-											className="list-disc ml-5"
-										>
-											{item}
-										</li>
-									))}
-								</ul>
-							)}
+								{/* Bullet list */}
+								{card.list.length > 0 && (
+									<ul className="text-[#666666] text-[16px] leading-[24px] space-y-2 mb-6">
+										{card.list.map((item, index) => (
+											<li
+												key={index}
+												className="list-disc ml-5"
+											>
+												{item}
+											</li>
+										))}
+									</ul>
+								)}
 
-							{/* Push button to bottom */}
-							<div className="mt-auto">
-								<Link
-									to={card.link}
-									className="w-full bg-[#07355A] hover:bg-[#0A426F] text-white py-3 rounded-lg text-sm font-medium transition inline-block text-center"
-								>
-									View More
-								</Link>
+								{/* Push button to bottom */}
+								<div className="mt-auto">
+									<Link
+										to={card.link}
+										className="w-full bg-[#07355A] hover:bg-[#0A426F] text-white py-3 rounded-lg text-sm font-medium transition-colors duration-300 inline-block text-center"
+									>
+										View More
+									</Link>
+								</div>
 							</div>
 						</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
 		</div>
 	);

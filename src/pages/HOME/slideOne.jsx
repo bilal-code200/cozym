@@ -1,5 +1,6 @@
 import React from 'react';
 import img1 from '../../assets/images/homeOne.jpg';
+import { Link } from 'react-router-dom';
 
 export default function SlideOne({ active }) {
 	return (
@@ -38,9 +39,12 @@ export default function SlideOne({ active }) {
 						Cozym Academy.
 					</p>
 
-					<button className="bg-[#FAA419] hover:bg-yellow-400 w-fit mt-[11px] px-10 py-3 rounded text-[18px] leading-[27px] font-semibold transition-all transform hover:scale-105">
+					<Link
+						to="/contact"
+						className="bg-[#FAA419] hover:bg-yellow-400 w-fit mt-[11px] px-10 py-3 rounded text-[18px] leading-[27px] font-semibold transition-all transform hover:scale-105 inline-block"
+					>
 						Get in Touch
-					</button>
+					</Link>
 				</div>
 			</div>
 		</div>

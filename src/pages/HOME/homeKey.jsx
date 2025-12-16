@@ -50,7 +50,7 @@ export default function HomeKey() {
 					className="inline-block mt-10"
 				>
 					<button className="px-10 py-4 bg-[#012A42] text-white rounded-lg text-lg font-semibold shadow-lg hover:bg-[#033759] transition">
-						About
+						About Us
 					</button>
 				</Link>
 			</div>

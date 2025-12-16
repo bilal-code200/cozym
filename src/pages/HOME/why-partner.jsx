@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import homeWhy from '../../assets/images/homeWhy.png';
+import { Link } from 'react-router-dom';
 
 const WhyPartnerWithCozym = () => {
 	const features = [
@@ -55,9 +56,12 @@ const WhyPartnerWithCozym = () => {
 						</div>
 
 						{/* CTA Button */}
-						<button className="bg-[#FAA419] hover:bg-[#ffa30e] text-white  text-[14px] leading-[30px] font-bold px-[50px] py-3.5 rounded-md transition-all duration-200 shadow-lg hover:shadow-xl">
+						<Link
+							to="/projects/lpg"
+							className="bg-[#FAA419] hover:bg-[#ffa30e] text-white  text-[14px] leading-[30px] font-bold px-[50px] py-3.5 rounded-md transition-all duration-200 shadow-lg hover:shadow-xl inline-block"
+						>
 							Discover More
-						</button>
+						</Link>
 					</div>
 				</div>
 			</div>

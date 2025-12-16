@@ -40,7 +40,7 @@ const ClientMarquee = () => {
 					<div className="w-1/2 bg-[#FAA419]"></div>
 				</div>
 				{/* Bottom border */}
-				<div className="absolute bottom-0 left-0 w-full h-[2px] flex">
+				<div className="absolute bottom-0 left-0 w-full h-[0.5px] flex">
 					<div className="w-1/2 bg-[#FAA419]"></div>
 					<div className="w-1/2 bg-[#002B45]"></div>
 				</div>

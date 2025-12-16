@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img1 from '../../assets/images/case1.png';
 import img2 from '../../assets/images/case2.png';
 import img3 from '../../assets/images/case3.png';
@@ -79,9 +80,12 @@ const CaseStudies = () => {
 
 				{/* Portfolio Button */}
 				<div className="flex justify-start">
-					<button className="bg-[#0a2540] hover:bg-[#163d5e] text-white text-[18px] font-semibold px-11 py-3 rounded-md transition-colors duration-200">
+					<Link
+						to="/projects/lpg"
+						className="bg-[#0a2540] hover:bg-[#163d5e] text-white text-[18px] font-semibold px-11 py-3 rounded-md transition-colors duration-200 inline-block"
+					>
 						Portfolio
-					</button>
+					</Link>
 				</div>
 			</div>
 		</div>
