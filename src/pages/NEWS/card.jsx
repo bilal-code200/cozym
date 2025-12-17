@@ -302,7 +302,7 @@ export default function BlogPage() {
                 <img
                   src={post.image}
                   alt="Post"
-                  className="w-full h-[320px] object-cover"
+                  className="w-full h-[] object-cover"
                 />
 
                 <div className="p-6">
