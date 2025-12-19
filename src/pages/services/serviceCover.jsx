@@ -5,7 +5,7 @@ export default function ServiceCover() {
 		<div>
 			{' '}
 			<div
-				className="w-full h-[402px] bg-cover bg-center flex items-center justify-center relative"
+				className="w-full h-[402px] font-Montserrat bg-cover bg-center flex items-center justify-center relative"
 				style={{
 					backgroundImage: `url(${projectOne})`,
 				}}
