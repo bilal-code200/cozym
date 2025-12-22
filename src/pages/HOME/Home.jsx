@@ -18,7 +18,8 @@ import linkedin from '../../assets/icons/hl.svg';
 
 export default function Home() {
 	const [index, setIndex] = useState(0);
-	const [showFooter, setShowFooter] = useState(true);
+	const [showFooter, setShowFooter] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
 	// Auto slide change
 	useEffect(() => {
@@ -39,6 +40,18 @@ export default function Home() {
 		handleScroll();
 
 		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
+	// Detect mobile
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth < 768);
+		};
+
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+
+		return () => window.removeEventListener('resize', checkMobile);
 	}, []);
 
 	// Scroll to section if hash is present
