@@ -234,13 +234,15 @@ export default function TrainingCapacity() {
 								))}
 							</ul>
 
-							<Link
-								to="/careers"
+							<a
+								href="https://forms.gle/GuuyvYUjpoMCLD5z7"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="mt-8 bg-[#FAA419] hover:bg-orange-400 text-white px-[45px] py-3 rounded-md font-semibold w-fit inline-block text-center transition-colors duration-200"
 								aria-label="Join Cozym Academy for training and capacity development"
 							>
 								Join Us
-							</Link>
+							</a>
 						</div>
 					</div>
 				</div>

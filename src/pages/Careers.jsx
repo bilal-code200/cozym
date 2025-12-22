@@ -4,7 +4,7 @@ import CareerH from './careersH';
 
 // Google Sheet CSV endpoint
 const SHEET_CSV_URL =
-	'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJSh_T6Ilo3rNou9sjgj69WmpkvsoqieKw_uX82_YNi-HZ0D4TfRa1SAGcmdjXozoeGXnZyvPJfQoA/pub?gid=0&single=true&output=csv';
+	'https://docs.google.com/spreadsheets/d/e/2PACX-1vTCM9npf0dLhng9d1YddxfZy8B7eVnCIcoqwiydvDMBNEfyCxXhj_7D0yc-b5sCYJte38GY99vZDPCr/pub?output=csv';
 
 // Static Google Form link (same for all jobs)
 const STATIC_FORM_LINK =

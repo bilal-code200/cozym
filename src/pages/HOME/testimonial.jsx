@@ -14,9 +14,9 @@ const TestimonialSlider = () => {
 	const testimonials = [
 		{
 			type: 'video',
-			videoId: '2PA7lCcgftY', // Replace with your actual YouTube video ID
-			name: 'Matthew J. Wyman',
-			role: 'Managing Director',
+			videoId: '2PA7lCcgftY',
+			name: 'Mr Kumar Deepak',
+			role: 'Plant Manager',
 			company: 'Agios MultiSport Ltd',
 			rating: 4.5,
 		},
@@ -42,7 +42,7 @@ const TestimonialSlider = () => {
 		if (timerRef.current) clearInterval(timerRef.current);
 		timerRef.current = setInterval(() => {
 			nextSlide();
-		}, 10000);
+		}, 9000000000000);
 	};
 
 	const stopAutoPlay = () => {

@@ -15,18 +15,18 @@ export default function SlideTwo({ active }) {
 
 			<div className="absolute inset-0 bg-black/20" />
 
-			<div className="relative max-w-[1370px] px-[100px] font-Montserrat  mx-auto h-full w-full flex flex-col items-end pt-[10%]  text-white animate-fadeSlide">
-				<div>
-					<h1 className="text-[48px] text-[#FAA419] font-extrabold">
+			<div className="relative max-w-[1370px] px-4 sm:px-6 md:px-8 lg:px-[100px] font-Montserrat mx-auto h-full w-full flex flex-col items-center sm:items-end pt-10 sm:pt-12 lg:pt-[10%] text-white animate-fadeSlide">
+				<div className="">
+					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] text-[#FAA419] font-extrabold">
 						Key Fact
 					</h1>
-					<li className="text-[18px] leading-[29px] text-[#ffffff] font-medium">
+					<li className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed sm:leading-[25px] lg:leading-[29px] text-[#ffffff] font-medium">
 						Founded 2012 — Licensed by NUPRC & NMDPRA
 					</li>
-					<li className="text-[18px] leading-[29px] text-[#ffffff] font-medium">
+					<li className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed sm:leading-[25px] lg:leading-[29px] text-[#ffffff] font-medium">
 						Delivered 25+ LPG, CNG & terminal projects
 					</li>
-					<li className="text-[18px] leading-[29px] text-[#ffffff] font-medium">
+					<li className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed sm:leading-[25px] lg:leading-[29px] text-[#ffffff] font-medium">
 						Integrated EPC delivery + Cozym Academy
 					</li>
 				</div>

@@ -66,11 +66,12 @@ export default function Home() {
 						id="homefooter"
 						className="bg-[#002B45] py-0 flex justify-center fixed bottom-0 left-0 right-0 z-50"
 					>
-						<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[20px] md:px-[40px] lg:px-[80px] max-w-[1200px] mx-auto flex justify-between items-center">
+						<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[20px]  lg:px-[80px] max-w-[1200px] mx-auto flex justify-between items-center">
 							<div className="flex  items-center gap-28 border-r-[1px] border-l-[1px] border-[#ffffff]/20 px-24">
 								<div className="flex gap-4">
 									<a
-										href="https://twitter.com/"
+										href="https://x.com/CozymLimited
+"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -80,7 +81,7 @@ export default function Home() {
 										/>
 									</a>
 									<a
-										href="https://facebook.com/"
+										href="https://www.facebook.com/share/17MouMzSZ4/?mibextid=wwXIfr"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -90,7 +91,7 @@ export default function Home() {
 										/>
 									</a>
 									<a
-										href="https://linkedin.com/"
+										href="https://www.linkedin.com/company/cozym-process-systems/"
 										target="_blank"
 										rel="noreferrer"
 									>
