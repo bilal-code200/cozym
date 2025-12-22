@@ -300,7 +300,7 @@ export default function BlogPage() {
           {/* RIGHT SIDEBAR */}
           <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
             {/* SEARCH */}
-            <div className="flex items-center bg-[#012A42] rounded-lg px-3 sm:px-4 py-2 sm:py-3">
+            <div className="flex items-center bg-[#012A42] rounded-lg px-3 sm:px-4 py-3 sm:py-3">
               <input
                 type="text"
                 placeholder="Search here..."
