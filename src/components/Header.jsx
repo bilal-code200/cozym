@@ -511,18 +511,18 @@ export default function Header2() {
                   Contacts
                 </NavLink>
               </li>
-              <li className="mt-10">
-                <a
-                  href="/cozymprofile.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setMenuOpen(false)}
-                  className="bg-[#FAA419] text-white px-[25px] py-[10px] rounded inline-block"
-                >
-                  Download Profile
-                </a>
-              </li>
             </ul>
+            <div className="mt-16">
+              <a
+                href="/cozymprofile.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="bg-[#FAA419] text-white px-[25px] py-[10px] rounded inline-block"
+              >
+                Download Profile
+              </a>
+            </div>
           </div>
         </div>
       )}

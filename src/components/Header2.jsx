@@ -343,7 +343,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed top-[80px] left-6 right-6 bg-[#ffffff] z-50 md:hidden flex flex-col">
+        <div className="fixed top-[80px] left-6 right-6 bg-[#ffffff] z-50 md:hidden flex flex-col rounded-b-2xl">
           <div className="flex-1 overflow-y-auto pt-6 pb-10 px-4">
             <ul className="text-[#002b45] text-left space-y-4 max-w-md">
               <li>
@@ -542,7 +542,8 @@ export default function Header() {
                   Contacts
                 </NavLink>
               </li>
-              <li className="mt-4">
+              </ul>
+              <div className="mt-16">
                 <a
                   href="/cozymprofile.pdf"
                   target="_blank"
@@ -552,8 +553,8 @@ export default function Header() {
                 >
                   Download Profile
                 </a>
-              </li>
-            </ul>
+              </div>
+            
           </div>
         </div>
       )}
