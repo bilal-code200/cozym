@@ -343,8 +343,8 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed top-[80px] left-0 right-0 bg-[#ffffff] z-50 md:hidden flex flex-col">
-          <div className="flex-1 overflow-y-auto py-20 px-4">
+        <div className="fixed top-[80px] left-6 right-6 bg-[#ffffff] z-50 md:hidden flex flex-col">
+          <div className="flex-1 overflow-y-auto pt-6 pb-10 px-4">
             <ul className="text-[#002b45] text-left space-y-4 max-w-md">
               <li>
                 <NavLink
@@ -366,7 +366,7 @@ export default function Header() {
               </li>
               <li className="mt-4">
                 <div
-                  className="text-[#FAA419] font-bold cursor-pointer flex items-center gap-2"
+                  className="text-[#002b45] cursor-pointer flex items-center gap-2"
                   onClick={() => setMobileServiceOpen(!mobileServiceOpen)}
                 >
                   Services{" "}
@@ -455,7 +455,7 @@ export default function Header() {
               </li>
               <li className="mt-4">
                 <div
-                  className="text-[#FAA419] font-bold cursor-pointer flex items-center gap-2"
+                  className="text-[#002b45] cursor-pointer flex items-center gap-2"
                   onClick={() => setMobileProjectOpen(!mobileProjectOpen)}
                 >
                   Projects{" "}
