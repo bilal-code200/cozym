@@ -29,14 +29,16 @@ export default function SectionTwo() {
 	return (
 		<div>
 			<div>
-				<section className="py-[160px] max-w-[1370px] px-[100px] mx-auto flex flex-col md:flex-row gap-10">
-					<div className="bg-white p-8 rounded-xl shadow-lg w-1/2 h-[584px]">
-						<h3 className="text-[24px] font-semibold mb-4">About Us</h3>
-						<h2 className="text-[36px] text-[#002B45] leading-[43px] font-bold mb-4">
+				<section className=" lg:pt-[160px] lg:pb-[160px] pt-[40px] pb-[100px] max-w-[1370px] lg:px-[100px] px-[16px] lg:mt-0 mt-10 mx-auto flex flex-col lg:flex-row gap-10">
+					<div className="bg-white lg:p-8 p-5 rounded-xl shadow-lg lg:w-1/2 w-full lg:h-[584px]">
+						<h3 className="lg:text-[24px] text-[20px] font-semibold mb-4">
+							About Us
+						</h3>
+						<h2 className="lg:text-[36px] text-[#002B45] lg:leading-[43px] text-[22px] leading-[30px] font-bold mb-4">
 							Cozym Limited provides integrated EPC capabilities across the oil
 							& gas project lifecycle
 						</h2>
-						<p className="text-[#666666] leading-[28px] text-[20px]">
+						<p className="text-[#666666] lg:leading-[28px] lg:pt-0 pt-[10px] lg:text-[20px] text-[14px] leading-[22px]">
 							From feasibility and FEED to engineering, procurement,
 							construction, commissioning, and post-handover training. We align
 							every scope with international standards (API, ASME, ISO, BS,
@@ -46,7 +48,7 @@ export default function SectionTwo() {
 					</div>
 
 					{/* VIDEO SECTION */}
-					<div className="rounded-xl overflow-hidden shadow-lg w-1/2 h-[584px] relative cursor-pointer">
+					<div className="rounded-xl overflow-hidden shadow-lg lg:w-1/2 w-full lg:h-[584px] relative cursor-pointer">
 						{/* Video */}
 						<video
 							ref={videoRef}
@@ -58,7 +60,7 @@ export default function SectionTwo() {
 						/>
 
 						{/* Overlay */}
-						<div className="absolute inset-0 bg-black/40 rounded-xl transition"></div>
+						<div className="absolute inset-0 bg-black/40 rounded-xl transition "></div>
 
 						{/* Play button */}
 						<div className="absolute inset-0 flex justify-center items-center">

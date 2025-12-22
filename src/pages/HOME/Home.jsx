@@ -25,7 +25,7 @@ export default function Home() {
 	useEffect(() => {
 		const timer = setInterval(() => {
 			setIndex(prev => (prev + 1) % 3);
-		}, 9000000000);
+		}, 10000);
 
 		return () => clearInterval(timer);
 	}, []);
@@ -70,14 +70,14 @@ export default function Home() {
 			{/* HERO / SLIDER SECTION */}
 			<div className="relative w-full h-screen  font-Montserrat overflow-hidden">
 				<SlideOne active={index === 0} />
-				{/* <SlideTwo active={index === 1} />
-				<SlideThree active={index === 2} /> */}
+				<SlideTwo active={index === 1} />
+				<SlideThree active={index === 2} />
 
 				{/* FIXED FOOTER — ONLY WHEN AT TOP */}
 				{showFooter && (
 					<div
 						id="homefooter"
-						className="bg-[#002B45] py-0 flex justify-center fixed bottom-0 left-0 right-0 z-50"
+						className="bg-[#002B45] lg:py-0 py-1 flex justify-center fixed bottom-0 left-0 right-0 z-50"
 					>
 						<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[20px]  lg:px-[80px] max-w-[1200px] mx-auto flex justify-between items-center">
 							<div className="flex  items-center gap-28 border-r-[1px] border-l-[1px] border-[#ffffff]/20 px-24">
@@ -133,13 +133,13 @@ export default function Home() {
 			{/* OTHER SECTIONS */}
 			<div className="font-Montserrat">
 				<SectionTwo />
-				{/* <HomeKey />
+				<HomeKey />
 				<HomeServiceSection />
 				<TrainingCapacity />
 				<CaseStudies />
 				<WhyPartnerWithCozym />
 				<TestimonialSlider />
-				<ClientMarquee /> */}
+				<ClientMarquee />
 			</div>
 		</>
 	);

@@ -16,18 +16,18 @@ export default function HomeKey() {
 
 	return (
 		<section
-			className="   bg-cover bg-center flex  px-[170px]  pb-[60px] "
+			className="   bg-cover bg-center flex  lg:px-[170px] px-[16px] lg:pt-0  pb-[60px]  "
 			style={{
 				backgroundImage: `url(${Bg})`,
 			}}
 		>
 			<div className="relative z-10    text-[#012A42]">
 				{/* Yellow Header as Image */}
-				<div className="-mt-10 mb-9 ml-16">
+				<div className="lg:-mt-10 -mt-4 mb-9 lg:ml-16 ml-5">
 					<img
 						src={Keyimage}
 						alt="Key Milestones"
-						className=" "
+						className="h-auto lg:w-[190px]  w-[100px] "
 					/>
 				</div>
 
@@ -36,10 +36,12 @@ export default function HomeKey() {
 					{items.map((text, index) => (
 						<div
 							key={index}
-							className="flex items-start gap-3"
+							className="flex items-start  gap-3"
 						>
-							<FaRegCheckSquare className="text-[#F9AB24] text-2xl mt-1" />
-							<p className="text-lg font-semibold text-[#012A42]">{text}</p>
+							<FaRegCheckSquare className="text-[#F9AB24]    w-[25px] mt-1" />
+							<p className="lg:text-lg text-[14px] leading-[22px] font-semibold text-[#002B45]">
+								{text}
+							</p>
 						</div>
 					))}
 				</div>
@@ -49,7 +51,7 @@ export default function HomeKey() {
 					to="/about"
 					className="inline-block mt-10"
 				>
-					<button className="px-10 py-4 bg-[#012A42] text-white rounded-lg text-lg font-semibold shadow-lg hover:bg-[#033759] transition">
+					<button className="lg:px-10 px-8 lg:py-4 py-2 bg-[#012A42] text-white rounded-lg lg:text-lg text-[14px] font-semibold shadow-lg hover:bg-[#033759] transition">
 						About Us
 					</button>
 				</Link>

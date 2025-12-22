@@ -156,9 +156,9 @@ export default function TrainingCapacity() {
 			className="w-full bg-[#002B45] text-white"
 		>
 			{/* FULL SCREEN WIDTH */}
-			<div className="w-full flex flex-col md:flex-row gap-[6%] px-6 md:px-0">
+			<div className="w-full flex flex-col lg:flex-row gap-[6%] px-[16px] lg:px-0">
 				{/* LEFT — FULL SCREEN SLIDER */}
-				<div className="relative w-[47%] h-[200px] md:h-auto overflow-hidden">
+				<div className="relative lg:w-[47%] w-full h-[200px] lg:h-auto overflow-hidden">
 					{slides.map((img, index) => (
 						<img
 							key={index}
@@ -187,7 +187,7 @@ export default function TrainingCapacity() {
 				</div>
 
 				{/* RIGHT — TEXT CONTENT */}
-				<div className="flex flex-col justify-center  py-20 w-[47%]">
+				<div className="flex flex-col justify-center  lg:py-20 lg:w-[47%] w-full">
 					<h2 className="text-[40px] leading-[50px] font-semibold ">
 						Cozym Academy — Training & <br /> Capacity Development
 					</h2>
@@ -199,7 +199,7 @@ export default function TrainingCapacity() {
 						operations, and process safety.
 					</p>
 
-					<div className="flex gap-10 mt-8 items-center ">
+					<div className="flexnlg:flex-row flex-col gap-10 mt-8 items-center ">
 						{/* ANIMATED PROGRESS CIRCLE */}
 						<div>
 							<div className=" flex justify-center border-r px-4 border-r-[#ffffff]/30">

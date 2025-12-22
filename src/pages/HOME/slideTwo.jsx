@@ -15,7 +15,7 @@ export default function SlideTwo({ active }) {
 
 			<div className="absolute inset-0 bg-black/20" />
 
-			<div className="relative max-w-[1370px] px-4 sm:px-6 md:px-8 lg:px-[100px] font-Montserrat mx-auto h-full w-full flex flex-col items-center sm:items-end pt-10 sm:pt-12 lg:pt-[10%] text-white animate-fadeSlide">
+			<div className="relative max-w-[1370px] px-10 lg:px-[100px] font-Montserrat mx-auto h-full w-full flex flex-col items-center justify-center lg:justify-start lg:items-end pt-[10%] lg:pt-[10%] text-white animate-fadeSlide">
 				<div className="">
 					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] text-[#FAA419] font-extrabold">
 						Key Fact

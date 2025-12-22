@@ -312,7 +312,7 @@ export default function Header2() {
 
 			{/* Mobile Menu */}
 			{menuOpen && (
-				<div className="fixed top-[90px] left-6 right-6 bg-white/10 backdrop-blur-[10px] rounded-b-2xl   z-50 md:hidden flex flex-col">
+				<div className="fixed top-[90px] left-0 right-6 bg-white/10 backdrop-blur-[10px] rounded-b-2xl   z-50 md:hidden flex flex-col">
 					<div className="flex-1 overflow-y-auto pt-6 pb-10 px-4">
 						<ul className="text-white text-left space-y-4 max-w-md">
 							<li>

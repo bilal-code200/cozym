@@ -130,13 +130,13 @@ export default function HomeServiceSection() {
 				backgroundRepeat: 'no-repeat',
 			}}
 		>
-			<div className="max-w-[1370px] mx-auto px-[100px]">
+			<div className="max-w-[1370px] mx-auto lg:px-[100px] px-[16px]">
 				<div className=" mb-[42px]">
-					<p className="text-[36px] leading-[43px] font-semibold text-[#002B45] inline-block">
+					<p className="lg:text-[36px] text-[20px] lg:leading-[43px] leading-[23px] font-semibold text-[#002B45] inline-block">
 						Our Services
 					</p>
 				</div>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-[100px]">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 lg:gap-y-[100px] gap-y-[50px]">
 					{cards.map((card, i) => (
 						<div
 							key={i}
@@ -163,18 +163,18 @@ export default function HomeServiceSection() {
 							</div>
 
 							{/* Content */}
-							<div className="flex flex-col mt-5 px-7 py-7 bg-transparent flex-grow border-2 border-[#E7E7E7] rounded-lg">
-								<h3 className="text-[24px] leading-[28px] font-semibold text-[#002B45] mb-5 transition-all duration-500 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#002B45] group-hover:to-[#000e17] group-hover:bg-clip-text group-hover:transform group-hover:scale-105">
+							<div className="flex flex-col lg:mt-5 mt-4 px-7 py-7 bg-transparent flex-grow border-2 border-[#E7E7E7] rounded-lg">
+								<h3 className="lg:text-[24px] lg:leading-[28px] text-[16px] leading-[22px] font-semibold text-[#002B45] mb-5 transition-all duration-500 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#002B45] group-hover:to-[#000e17] group-hover:bg-clip-text group-hover:transform group-hover:scale-105">
 									{card.title}
 								</h3>
 
-								<p className="text-[#666666] text-[16px] leading-[24px] mb-4">
+								<p className="text-[#666666] lg:text-[16px] text-[14px] leading-[24px] mb-4">
 									{card.desc}
 								</p>
 
 								{/* Bullet list */}
 								{card.list.length > 0 && (
-									<ul className="text-[#666666] text-[16px] leading-[24px] space-y-2 mb-6">
+									<ul className="text-[#666666] lg:text-[16px] text-[14px] leading-[24px] space-y-2 mb-6">
 										{card.list.map((item, index) => (
 											<li
 												key={index}
