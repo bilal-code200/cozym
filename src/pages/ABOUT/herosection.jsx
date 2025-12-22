@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative w-full h-[calc(100vh-130px)] overflow-hidden pt-20 md:pt-0">
+    <div className="relative w-full h-screen overflow-hidden pt-20 md:pt-0">
       {/* Background */}
       <AnimatePresence mode="wait">
         <motion.div

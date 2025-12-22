@@ -145,7 +145,7 @@ export default function Footer() {
                 placeholder="Your Email Address"
                 className="flex-1 px-3 py-2 text-black text-sm outline-none"
               />
-              <button className="bg-[#FAA419] px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-center">
+              <button className="bg-[#FAA419] px-3 sm:px-4 py-4 sm:py-4 flex items-center justify-center">
                 <FaTelegramPlane className="text-[#ffffff] text-sm sm:text-base lg:text-[15px]" />
               </button>
             </div>
