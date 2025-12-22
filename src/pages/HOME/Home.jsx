@@ -25,7 +25,7 @@ export default function Home() {
 	useEffect(() => {
 		const timer = setInterval(() => {
 			setIndex(prev => (prev + 1) % 3);
-		}, 10000);
+		}, 9000000000);
 
 		return () => clearInterval(timer);
 	}, []);
@@ -68,10 +68,10 @@ export default function Home() {
 	return (
 		<>
 			{/* HERO / SLIDER SECTION */}
-			<div className="relative w-full h-screen font-Montserrat overflow-hidden">
+			<div className="relative w-full h-screen  font-Montserrat overflow-hidden">
 				<SlideOne active={index === 0} />
-				<SlideTwo active={index === 1} />
-				<SlideThree active={index === 2} />
+				{/* <SlideTwo active={index === 1} />
+				<SlideThree active={index === 2} /> */}
 
 				{/* FIXED FOOTER — ONLY WHEN AT TOP */}
 				{showFooter && (
@@ -133,13 +133,13 @@ export default function Home() {
 			{/* OTHER SECTIONS */}
 			<div className="font-Montserrat">
 				<SectionTwo />
-				<HomeKey />
+				{/* <HomeKey />
 				<HomeServiceSection />
 				<TrainingCapacity />
 				<CaseStudies />
 				<WhyPartnerWithCozym />
 				<TestimonialSlider />
-				<ClientMarquee />
+				<ClientMarquee /> */}
 			</div>
 		</>
 	);

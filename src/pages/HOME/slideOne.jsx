@@ -16,7 +16,7 @@ export default function SlideOne({ active }) {
 
 			<div className="absolute inset-0 bg-black/20" />
 
-			<div className="relative max-w-[1370px] px-4 sm:px-6 md:px-8 lg:px-[90px] pb-6 sm:pb-8 lg:pb-10 mx-auto h-full flex flex-col justify-center pt-10 sm:pt-12 lg:pt-[50px] text-[#ffffff] animate-fadeSlide">
+			<div className="relative max-w-[1370px]  px-4 sm:px-6 md:px-8 lg:px-[90px] pb-6 sm:pb-8 lg:pb-10 mx-auto h-full flex flex-col justify-center pt-10 sm:pt-12 lg:pt-[50px] text-[#ffffff] animate-fadeSlide">
 				<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] leading-tight sm:leading-[50px] lg:leading-[58px] font-bold">
 					A 100% Nigerian EPC partner
 				</h1>
@@ -31,7 +31,7 @@ export default function SlideOne({ active }) {
 						${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
 					`}
 				>
-					<p className="text-sm sm:text-base md:text-lg lg:text-[20px] leading-relaxed sm:leading-[25px] lg:leading-[29px] text-[#ffffff] mt-8 sm:mt-10 lg:mt-[50px]">
+					<p className="text-[14px]  lg:text-[20px]   leading-[22px] lg:leading-[29px] text-[#ffffff] mt-8 sm:mt-10 lg:mt-[50px]">
 						Established in 2012, Cozym began with water and environmental
 						engineering and evolved into a trusted EPC partner for oil & gas
 						projects — from FEED and detailed engineering to procurement,
