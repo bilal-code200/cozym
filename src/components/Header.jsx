@@ -30,10 +30,10 @@ export default function Header2() {
   }, [menuOpen]);
 
   return (
-    <header className="w-full fixed md:static top-0 left-0 right-0 z-50">
+    <header className="w-full fixed md:static top-0 left-4 right-4 z-50">
       {/* NAV BAR */}
       <div className=" w-full absolute top-0 left-0 z-50">
-        <div className="py-[25px] px-[20px] md:px-[60px] lg:px-[80px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative">
+        <div className="py-[25px] px-[20px] md:px-[60px] lg:px-[80px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative md:bg-transparent md:rounded-none bg-white/10 backdrop-blur-[10px] lg:bg-transparent lg:rounded-none  lg:backdrop-blur-[0px] rounded-2xl">
           {/* Logo */}
           <div className=" h-[40px] md:h-[53px] w-[150px] md:w-[210px] ">
             <Link to="/">
@@ -312,7 +312,7 @@ export default function Header2() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed top-[80px] left-6 right-6 bg-white/10 backdrop-blur-[10px]   z-50 md:hidden flex flex-col">
+        <div className="fixed top-[90px] left-6 right-6 bg-white/10 backdrop-blur-[10px] rounded-b-2xl   z-50 md:hidden flex flex-col">
           <div className="flex-1 overflow-y-auto pt-6 pb-10 px-4">
             <ul className="text-white text-left space-y-4 max-w-md">
               <li>
@@ -511,7 +511,7 @@ export default function Header2() {
                   Contacts
                 </NavLink>
               </li>
-              <li className="mt-4">
+              <li className="mt-10">
                 <a
                   href="/cozymprofile.pdf"
                   target="_blank"
