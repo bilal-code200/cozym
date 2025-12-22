@@ -349,14 +349,18 @@ export default function Header() {
 
 			{/* Mobile Menu */}
 			{menuOpen && (
-				<div className="fixed top-[80px] left-6 right-6 bg-[#ffffff] z-50 md:hidden flex flex-col rounded-b-2xl">
+				<div className="fixed top-[91px] left-0 right-0 bg-[#ffffff] z-50 md:hidden flex flex-col rounded-b-2xl">
 					<div className="flex-1 overflow-y-auto pt-6 pb-10 px-4">
 						<ul className="text-[#002b45] text-left space-y-4 max-w-md">
 							<li>
 								<NavLink
 									to="/"
 									onClick={() => setMenuOpen(false)}
-									className="hover:text-[#FAA419]"
+									className={({ isActive }) =>
+										`hover:text-[#FAA419] ${
+											isActive ? 'text-[#FAA419] font-bold' : ''
+										}`
+									}
 								>
 									Home
 								</NavLink>
@@ -365,7 +369,11 @@ export default function Header() {
 								<NavLink
 									to="/about"
 									onClick={() => setMenuOpen(false)}
-									className="hover:text-[#FAA419]"
+									className={({ isActive }) =>
+										`hover:text-[#FAA419] ${
+											isActive ? 'text-[#FAA419] font-bold' : ''
+										}`
+									}
 								>
 									About
 								</NavLink>
@@ -388,7 +396,11 @@ export default function Header() {
 											<NavLink
 												to="/services/oilngas"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Oil & Gas Production Facilities
 											</NavLink>
@@ -397,7 +409,11 @@ export default function Header() {
 											<NavLink
 												to="/services/gasprocessing"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Gas Processing & Conditioning
 											</NavLink>
@@ -406,7 +422,11 @@ export default function Header() {
 											<NavLink
 												to="/services/gasdistribution"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Gas Distribution & Terminals
 											</NavLink>
@@ -415,7 +435,11 @@ export default function Header() {
 											<NavLink
 												to="/services/pipeline"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Pipelines & Distribution Networks
 											</NavLink>
@@ -424,7 +448,11 @@ export default function Header() {
 											<NavLink
 												to="/services/technical"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Technical Training
 											</NavLink>
@@ -433,7 +461,11 @@ export default function Header() {
 											<NavLink
 												to="/services/storage"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Storage Facilities
 											</NavLink>
@@ -442,7 +474,11 @@ export default function Header() {
 											<NavLink
 												to="/services/utility"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Utility & Support Infrastructure
 											</NavLink>
@@ -451,7 +487,11 @@ export default function Header() {
 											<NavLink
 												to="/services/procurement"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Procurement Services
 											</NavLink>
@@ -477,7 +517,11 @@ export default function Header() {
 											<NavLink
 												to="/projects/lpg"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												LPG Storage & Distribution Terminal
 											</NavLink>
@@ -486,7 +530,11 @@ export default function Header() {
 											<NavLink
 												to="/projects/feed"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												FEED — 1.6 km LPG Onshore Pipeline
 											</NavLink>
@@ -495,7 +543,11 @@ export default function Header() {
 											<NavLink
 												to="/projects/ded"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												DED — 18 km Onshore Gas Distribution
 											</NavLink>
@@ -504,7 +556,11 @@ export default function Header() {
 											<NavLink
 												to="/projects/integrity"
 												onClick={() => setMenuOpen(false)}
-												className="block hover:text-[#FAA419]"
+												className={({ isActive }) =>
+													`hover:text-[#FAA419] ${
+														isActive ? 'text-[#FAA419] font-bold' : ''
+													}`
+												}
 											>
 												Integrity Assessment & FEED
 											</NavLink>
@@ -516,7 +572,11 @@ export default function Header() {
 								<NavLink
 									to="/academy"
 									onClick={() => setMenuOpen(false)}
-									className="hover:text-[#FAA419]"
+									className={({ isActive }) =>
+										`hover:text-[#FAA419] ${
+											isActive ? 'text-[#FAA419] font-bold' : ''
+										}`
+									}
 								>
 									Academy
 								</NavLink>
@@ -525,7 +585,11 @@ export default function Header() {
 								<NavLink
 									to="/careers"
 									onClick={() => setMenuOpen(false)}
-									className="hover:text-[#FAA419]"
+									className={({ isActive }) =>
+										`hover:text-[#FAA419] ${
+											isActive ? 'text-[#FAA419] font-bold' : ''
+										}`
+									}
 								>
 									Careers
 								</NavLink>
@@ -534,7 +598,11 @@ export default function Header() {
 								<NavLink
 									to="/news"
 									onClick={() => setMenuOpen(false)}
-									className="hover:text-[#FAA419]"
+									className={({ isActive }) =>
+										`hover:text-[#FAA419] ${
+											isActive ? 'text-[#FAA419] font-bold' : ''
+										}`
+									}
 								>
 									News
 								</NavLink>
@@ -543,7 +611,11 @@ export default function Header() {
 								<NavLink
 									to="/contact"
 									onClick={() => setMenuOpen(false)}
-									className="hover:text-[#FAA419]"
+									className={({ isActive }) =>
+										`hover:text-[#FAA419] ${
+											isActive ? 'text-[#FAA419] font-bold' : ''
+										}`
+									}
 								>
 									Contacts
 								</NavLink>

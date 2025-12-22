@@ -18,8 +18,7 @@ import linkedin from '../../assets/icons/hl.svg';
 
 export default function Home() {
 	const [index, setIndex] = useState(0);
-	const [showFooter, setShowFooter] = useState(false);
-	const [isMobile, setIsMobile] = useState(false);
+	const [showFooter, setShowFooter] = useState(true);
 
 	// Auto slide change
 	useEffect(() => {
@@ -42,18 +41,6 @@ export default function Home() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
-	// Detect mobile
-	useEffect(() => {
-		const checkMobile = () => {
-			setIsMobile(window.innerWidth < 768);
-		};
-
-		checkMobile();
-		window.addEventListener('resize', checkMobile);
-
-		return () => window.removeEventListener('resize', checkMobile);
-	}, []);
-
 	// Scroll to section if hash is present
 	useEffect(() => {
 		const hash = window.location.hash;
@@ -68,7 +55,7 @@ export default function Home() {
 	return (
 		<>
 			{/* HERO / SLIDER SECTION */}
-			<div className="relative w-full h-screen  font-Montserrat overflow-hidden">
+			<div className="relative w-full h-screen font-Montserrat overflow-hidden">
 				<SlideOne active={index === 0} />
 				<SlideTwo active={index === 1} />
 				<SlideThree active={index === 2} />
@@ -77,14 +64,13 @@ export default function Home() {
 				{showFooter && (
 					<div
 						id="homefooter"
-						className="bg-[#002B45] lg:py-0 py-1 flex justify-center fixed bottom-0 left-0 right-0 z-50"
+						className="bg-[#002B45] py-0 flex justify-center fixed bottom-0 left-0 right-0 z-50"
 					>
-						<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[20px]  lg:px-[80px] max-w-[1200px] mx-auto flex justify-between items-center">
+						<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[20px] md:px-[40px] lg:px-[80px] max-w-[1200px] mx-auto flex justify-between items-center">
 							<div className="flex  items-center gap-28 border-r-[1px] border-l-[1px] border-[#ffffff]/20 px-24">
 								<div className="flex gap-4">
 									<a
-										href="https://x.com/CozymLimited
-"
+										href="https://twitter.com/"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -94,7 +80,7 @@ export default function Home() {
 										/>
 									</a>
 									<a
-										href="https://www.facebook.com/share/17MouMzSZ4/?mibextid=wwXIfr"
+										href="https://facebook.com/"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -104,7 +90,7 @@ export default function Home() {
 										/>
 									</a>
 									<a
-										href="https://www.linkedin.com/company/cozym-process-systems/"
+										href="https://linkedin.com/"
 										target="_blank"
 										rel="noreferrer"
 									>

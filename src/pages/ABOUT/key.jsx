@@ -27,7 +27,7 @@ export default function Milestones() {
           <img
             src={Keyimage}
             alt="Key Milestones"
-            className="w-48 sm:w-64 lg:w-auto h-auto"
+            className="w-[100px] sm:w-64 lg:w-[190px] h-auto"
           />
         </div>
 
