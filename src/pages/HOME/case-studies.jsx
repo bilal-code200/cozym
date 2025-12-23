@@ -40,38 +40,45 @@ const CaseStudies = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-			<div className="max-w-[1370px] mx-auto px-[100px]">
+		<div className="min-h-screen bg-gray-50 md:py-16 py-[28px] px-4  lg:px-8">
+			<div className="max-w-[1370px] mx-auto lg:px-[100px] px-4">
 				{/* Header */}
-				<h1 className="text-[36px] leading-[43px] font-bold text-[#002B45] mb-16 ">
+				<h1 className="md:text-[36px] md:leading-[43px] text-[16px] leading-[60px] font-bold text-[#002B45] md:mb-16 ">
 					Selected Case Studies
 				</h1>
 
 				{/* Case Studies Grid */}
-				<div className="grid grid-cols-1  lg:grid-cols-2 gap-8 mb-12 items-stretch">
+				<div className="grid grid-cols-1  lg:grid-cols-2 gap-8 md:mb-12 mb-6 items-stretch">
 					{caseStudies.map(study => (
 						<div
 							key={study.id}
 							className="rounded-lg p-[30px] shadow-lg overflow-hidden h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
 						>
-							<div className="flex flex-col sm:flex-row h-full">
-								{/* Image Section */}
-								<div className="w-48 h-1/2 sm:h-full flex-shrink-0">
-									<img
-										src={study.image}
-										alt={study.title}
-										className="w-full h-full object-contain"
-									/>
-								</div>
-
-								{/* Content Section */}
-								<div className="p-6 flex flex-col justify-center h-1/2 sm:h-full">
-									<h2 className="text-[24px] font-semibold text-[#002B45] mb-[27px] leading-[28px]">
+							<div className="flex flex-col h-full">
+								{/* Title */}
+								<div className="mb-4">
+									<h2 className="md:text-[24px] text-[16px] leading-[24px] font-semibold text-[#002B45] md:leading-[28px]">
 										{study.title}
 									</h2>
-									<p className="text-[16px] text-[#666666] leading-[24px] text-justify">
-										{study.description}
-									</p>
+								</div>
+
+								{/* Image and Description Container */}
+								<div className="flex flex-col lg:flex-row flex-grow">
+									{/* Image Section */}
+									<div className="w-full lg:w-48 flex-shrink-0 mb-4 lg:mb-0">
+										<img
+											src={study.image}
+											alt={study.title}
+											className="w-full h-full object-contain"
+										/>
+									</div>
+
+									{/* Description */}
+									<div className="lg:ml-4">
+										<p className="md:text-[16px] text-[14px] text-[#666666] leading-[24px] text-justify">
+											{study.description}
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>

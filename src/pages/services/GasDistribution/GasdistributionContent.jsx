@@ -7,16 +7,16 @@ import consultantImg from '../../../assets/images/serviceContact.png';
 export default function GasDistributionContent() {
 	return (
 		<div className="w-full py-12">
-			<div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[30%_70%] gap-8">
+			<div className="max-w-[1100px] md:px-[60px] px-4 mx-auto md:grid flex flex-col-reverse  md:grid-cols-[30%_70%] gap-8">
 				{/* ---------- LEFT COLUMN (FULL HEIGHT) ---------- */}
 				<div className="flex flex-col justify-between h-full space-y-6">
 					{/* Capabilities Box */}
-					<div className="bg-[#FAA419]/20 py-[40px] px-[50px] rounded-xl shadow-sm w-full ">
+					<div className="bg-[#FAA419]/20 py-[40px] px-4 sm:px-[50px] rounded-xl shadow-sm w-full ">
 						<h3 className="text-[#FAA419] font-extrabold text-[20px] leading-[30px]  mb-4">
 							Our Capabilities Include
 						</h3>
 
-						<ul className="text-[16px] leading-[20px] text-[#ffffff] space-y-4">
+						<ul className="md:text-[16px] text-[14px] leading-[20px] text-[#ffffff] space-y-4">
 							<li>CNG Mother & Daughter Stations</li>
 							<li>Distribution Pipelines</li>
 							<li>Pressure Regulating & Metering Stations (PRMS)</li>
@@ -36,7 +36,7 @@ export default function GasDistributionContent() {
 						></div>
 
 						<div className="relative z-10 text-center">
-							<h3 className="text-white text-[24px] leading-[30px] font-extrabold mb-2">
+							<h3 className="text-white lg:text-[24px] text-[22px] leading-[30px] font-extrabold mb-2">
 								Need Help?
 							</h3>
 							<p className="text-[#FAA419] text-[16px]">
@@ -59,7 +59,7 @@ export default function GasDistributionContent() {
 						</button>
 					</div>
 
-					<p className="text-[16px] leading-[20px] text-[#FAA419] font-medium">
+					<p className="lg:text-[16px] text-[16px] leading-[20px] lg:text-left text-center text-[#FAA419] font-medium">
 						Delivering Energy Safely, Efficiently, and at Scale
 					</p>
 				</div>
@@ -77,10 +77,10 @@ export default function GasDistributionContent() {
 
 					{/* Main Text Section */}
 					<div>
-						<h1 className="text-3xl lg:text-[40px] leading-[56px] font-extrabold text-[#ffffff] mb-4">
+						<h1 className="text-2xl lg:text-[40px] lg:leading-[56px] leading-[35px] font-extrabold text-[#ffffff] mb-4">
 							Gas Distribution & Terminals
 						</h1>
-						<div className="text-[18px] leading-[26px] text-[#ffffff] text-justify">
+						<div className="lg:text-[16px] text-[16px] leading-[26px] text-[#ffffff] text-justify">
 							<p className=" mb-6">
 								The success of Nigeria’s Decade of Gas and downstream growth
 								depends on robust distribution and terminal infrastructure that

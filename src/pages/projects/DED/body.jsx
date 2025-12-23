@@ -9,12 +9,12 @@ export default function Body() {
 		'Execution-ready documentation – specifications, engineering drawings, guidelines, and material take-off (MTO) lists for use by procurement and construction teams.',
 	];
 	return (
-		<div className="max-w-[1100px] mx-auto  my-[46px]">
+		<div className="max-w-[1100px] mx-auto md:px-[0px] px-4  my-[46px]">
 			<div>
 				<h1 className="text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					CONTEXT & CHALLENGE
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-3 text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-3 text-[#002B45] text-justify ">
 					In 2020, our client initiated a project to expand industrial gas
 					supply in Sagamu, Ogun State, by delivering a new natural gas
 					distribution system. The development required a 0.5 km × 14” pipeline
@@ -28,7 +28,7 @@ export default function Body() {
 				<h1 className=" mt-14 text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					COZYM INTERVENTION
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-3 text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-3 text-[#002B45] text-justify ">
 					Cozym was engaged as a specialist engineering subcontractor to prepare
 					the multidisciplinary DED package. Our deliverables included:
 				</p>
@@ -37,15 +37,15 @@ export default function Body() {
 						{items.map((item, index) => (
 							<li
 								key={index}
-								className="flex items-center gap-3"
+								className="flex items-start gap-3"
 							>
 								<img
 									src={checkStyle}
 									alt="check icon"
-									className="w-6 h-6 mt-1"
+									className="lg:w-6 lg:h-6 h-5 w-5 mt-3"
 								/>
 
-								<p className="text-[20px]  leading-[25px] pt-[10px] text-[#002B45] text-justify">
+								<p className="lg:text-[20px] text-[16px] leading-[25px] pt-[10px] text-[#002B45]  lg:text-justify">
 									{item}
 								</p>
 							</li>
@@ -55,7 +55,7 @@ export default function Body() {
 				<h1 className="mt-14 text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					DELIVERY
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-3 text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-3 text-[#002B45] text-justify ">
 					Our engineering outputs were developed using specialized tools
 					(AutoCAD, CAESAR II, STAAD.Pro, HYSYS) and fully aligned with API,
 					ASME, BS, and Nigerian regulatory codes. The package gave the EPC team
@@ -65,7 +65,7 @@ export default function Body() {
 				<h1 className=" mt-14 text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					RESULTS & IMPACT
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-[10px] text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-[10px] text-[#002B45] text-justify ">
 					The project has since been successfully constructed, commissioned, and
 					is currently operational, supplying reliable natural gas to Sagamu’s
 					industrial corridor. By providing execution-grade engineering, Cozym

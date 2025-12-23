@@ -1,35 +1,20 @@
-import React, { useRef, useState, useEffect } from 'react';
-import video from '../../assets/images/homeVideoo.mp4';
+import React, { useState } from 'react';
 
 export default function SectionTwo() {
-	const videoRef = useRef(null);
-	const modalVideoRef = useRef(null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
-
-	useEffect(() => {
-		if (videoRef.current) {
-			videoRef.current.currentTime = 32; // Start thumbnail at 5 seconds into the video
-		}
-	}, []);
 
 	const openModal = () => {
 		setIsModalOpen(true);
-		if (modalVideoRef.current) {
-			modalVideoRef.current.play();
-		}
 	};
 
 	const closeModal = () => {
 		setIsModalOpen(false);
-		if (modalVideoRef.current) {
-			modalVideoRef.current.pause();
-		}
 	};
 
 	return (
 		<div>
 			<div>
-				<section className=" lg:pt-[160px] lg:pb-[160px] pt-[40px] pb-[100px] max-w-[1370px] lg:px-[100px] px-[16px] lg:mt-0 mt-10 mx-auto flex flex-col lg:flex-row gap-10">
+				<section className=" lg:pt-[160px] lg:pb-[160px] pt-[40px] pb-[100px] max-w-[1370px] lg:px-[100px] px-5 lg:mt-0 mt-10 mx-auto flex flex-col lg:flex-row gap-10">
 					<div className="bg-white lg:p-8 p-5 rounded-xl shadow-lg lg:w-1/2 w-full lg:h-[584px]">
 						<h3 className="lg:text-[24px] text-[20px] font-semibold mb-4">
 							About Us
@@ -47,27 +32,24 @@ export default function SectionTwo() {
 						</p>
 					</div>
 
-					{/* VIDEO SECTION */}
-					<div className="rounded-xl overflow-hidden shadow-lg lg:w-1/2 w-full lg:h-[584px] relative cursor-pointer">
-						{/* Video */}
-						<video
-							ref={videoRef}
-							src={video}
+					{/* YOUTUBE VIDEO SECTION */}
+					<div
+						className="rounded-xl overflow-hidden shadow-lg lg:w-1/2 w-full lg:h-[584px] relative cursor-pointer"
+						onClick={openModal}
+					>
+						{/* Thumbnail */}
+						<img
+							src="https://img.youtube.com/vi/gOgynd5v_Ok/maxresdefault.jpg"
+							alt="YouTube Video Thumbnail"
 							className="w-full h-full object-cover rounded-xl shadow-lg"
-							muted
-							loop
-							playsInline
 						/>
 
 						{/* Overlay */}
-						<div className="absolute inset-0 bg-black/40 rounded-xl transition "></div>
+						<div className="absolute inset-0 bg-black/40 rounded-xl transition"></div>
 
 						{/* Play button */}
 						<div className="absolute inset-0 flex justify-center items-center">
-							<div
-								className="w-16 h-14 bg-red-700 backdrop-blur-md rounded-lg flex items-center justify-center hover:opacity-35 transition cursor-pointer"
-								onClick={openModal}
-							>
+							<div className="w-16 h-14 bg-red-700 backdrop-blur-md rounded-lg flex items-center justify-center hover:opacity-35 transition cursor-pointer">
 								<div className="w-0 h-0 border-l-[28px] border-[#ffffff] border-y-[16px] border-y-transparent"></div>
 							</div>
 						</div>
@@ -92,13 +74,13 @@ export default function SectionTwo() {
 						>
 							&times;
 						</button>
-						<video
-							ref={modalVideoRef}
-							src={video}
-							className="w-full h-auto rounded-lg"
-							controls
-							autoPlay
-						/>
+						<iframe
+							src="https://www.youtube.com/embed/gOgynd5v_Ok?autoplay=1"
+							title="YouTube video player"
+							className="w-full h-auto rounded-lg aspect-video"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowFullScreen
+						></iframe>
 					</div>
 				</div>
 			)}

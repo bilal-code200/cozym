@@ -9,12 +9,12 @@ export default function Body() {
 		'Execution-ready documentation – specifications, engineering drawings, guidelines, and material take-off (MTO) lists for use by procurement and construction teams.',
 	];
 	return (
-		<div className="max-w-[1100px] mx-auto  my-[46px]">
+		<div className="max-w-[1100px] mx-auto md:px-[0px] px-4  my-[46px]">
 			<div>
 				<h1 className="text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					CONTEXT & CHALLENGE
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-3 text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-3 text-[#002B45] text-justify ">
 					In 2021, our client acquired a petroleum storage depot in Lagos with
 					an installed capacity of approximately 20 million litres. The facility
 					had been idle for several years, with infrastructure degradation and
@@ -26,7 +26,7 @@ export default function Body() {
 				<h1 className=" mt-14 text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					COZYM INTERVENTION
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-3 text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-3 text-[#002B45] text-justify ">
 					Cozym was engaged to execute a comprehensive integrity assessment of
 					the depot infrastructure, covering tankage systems, product piping,
 					firefighting and utility networks, civil foundations, and structural
@@ -44,7 +44,7 @@ export default function Body() {
 				<h1 className="mt-14 text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					DELIVERY
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-3 text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-3 text-[#002B45] text-justify ">
 					Cozym’s work provided the client with a clear, risk-mitigated roadmap
 					for asset rehabilitation, transforming a dormant and underutilized
 					depot into a technically viable, commercially bankable project. The
@@ -54,7 +54,7 @@ export default function Body() {
 				<h1 className=" mt-14 text-[20px] text-[#002B45] font-extrabold leading-[30px]">
 					RESULTS & IMPACT
 				</h1>
-				<p className="text-[20px] leading-[25px] pt-[10px] text-[#002B45] text-justify ">
+				<p className="lg:text-[20px] text-[16px] leading-[25px] pt-[10px] text-[#002B45] text-justify ">
 					The depot has since been successfully redeveloped, commissioned, and
 					integrated into Nigeria’s downstream supply chain. With this facility,
 					our client is position to generate sustained revenue from a strategic

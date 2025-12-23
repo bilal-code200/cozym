@@ -153,18 +153,18 @@ export default function TrainingCapacity() {
 		<section
 			id="trainingCapacity"
 			ref={sectionRef}
-			className="w-full bg-[#002B45] text-white"
+			className="w-full bg-[#002B45] md:pb-0 pb-10 font-Montserrat text-white"
 		>
 			{/* FULL SCREEN WIDTH */}
-			<div className="w-full flex flex-col lg:flex-row gap-[6%] px-[16px] lg:px-0">
+			<div className="w-full flex flex-col lg:flex-row gap-[6%] px-5 lg:px-0">
 				{/* LEFT — FULL SCREEN SLIDER */}
-				<div className="relative lg:w-[47%] w-full h-[200px] lg:h-auto overflow-hidden">
+				<div className="relative lg:w-[47%] w-full h-[500px] lg:h-auto overflow-hidden">
 					{slides.map((img, index) => (
 						<img
 							key={index}
 							src={img}
 							alt=""
-							className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+							className={`absolute object-center object-cover inset-0 w-full h-full  transition-opacity duration-700 ${
 								current === index ? 'opacity-100' : 'opacity-0'
 							}`}
 						/>
@@ -187,36 +187,36 @@ export default function TrainingCapacity() {
 				</div>
 
 				{/* RIGHT — TEXT CONTENT */}
-				<div className="flex flex-col justify-center  lg:py-20 lg:w-[47%] w-full">
-					<h2 className="text-[40px] leading-[50px] font-semibold ">
+				<div className="flex flex-col justify-center md:mt-0 mt-6  md:py-20 md:w-[47%] w-full">
+					<h2 className="lg:text-[40px] text-[16px] lg:leading-[50px] leading-[24px] font-semibold ">
 						Cozym Academy — Training & <br /> Capacity Development
 					</h2>
 
-					<p className=" text-[#CCCCCC] text-[20px] leading-[29px] mt-11  max-w-lg">
+					<p className=" text-[#CCCCCC] md:text-[20px] text-[14px] lg:leading-[29px] leader-[24px] md:mt-11 mt-5  max-w-lg">
 						We deliver hands-on technical training to build local capacity
 						across oilfield surface operations, gas distribution, CNG/LPG
 						infrastructure, metering & custody transfer, storage & terminal
 						operations, and process safety.
 					</p>
 
-					<div className="flexnlg:flex-row flex-col gap-10 mt-8 items-center ">
+					<div className="flex lg:flex-row flex-col gap-10 md:mt-8 mt-10 items-center ">
 						{/* ANIMATED PROGRESS CIRCLE */}
 						<div>
-							<div className=" flex justify-center border-r px-4 border-r-[#ffffff]/30">
+							<div className=" flex justify-center md:border-r px-4 md:border-r-[#ffffff]/30">
 								<CircularProgress
 									size={120}
 									stroke={6}
 									progress={progressValue}
 								/>
 							</div>
-							<p className="flex justify-center items-center text-[20px] font-semibold pt-5">
+							<p className="flex justify-center items-center md:text-[20px] text-[14px] font-semibold md:pt-5 pt-3">
 								Certification{' '}
 							</p>
 						</div>
 
 						{/* BULLET LIST + BUTTON */}
 						<div>
-							<ul className="space-y-3">
+							<ul className="space-y-3 ">
 								{[
 									'Classroom instruction • hands-on workshops',
 									'Customized corporate training for operators and EPC teams',
@@ -224,7 +224,7 @@ export default function TrainingCapacity() {
 								].map((item, i) => (
 									<li
 										key={i}
-										className="flex items-center text-[16px] font-medium gap-3"
+										className="flex items-center md:text-[16px] text-[14px] font-medium gap-3"
 									>
 										<span className="w-4 h-4 border border-white rounded-sm flex items-center justify-center text-xs">
 											✓

@@ -141,7 +141,7 @@ const TestimonialSlider = () => {
 			stars.push(
 				<span
 					key={i}
-					className="text-amber-400 text-3xl"
+					className="text-amber-400 md:text-3xl text-2xl"
 				>
 					★
 				</span>
@@ -152,7 +152,7 @@ const TestimonialSlider = () => {
 			stars.push(
 				<span
 					key="half"
-					className="text-amber-400 text-3xl relative inline-block"
+					className="text-amber-400 md:text-3xl text-2xl relative inline-block"
 				>
 					<span className="absolute inset-0 overflow-hidden w-1/2">★</span>
 					<span className="text-gray-300">★</span>
@@ -165,7 +165,7 @@ const TestimonialSlider = () => {
 			stars.push(
 				<span
 					key={`empty-${i}`}
-					className="text-gray-300 text-2xl"
+					className="text-gray-300 md:text-2xl text-xl"
 				>
 					★
 				</span>
@@ -185,20 +185,20 @@ const TestimonialSlider = () => {
 	};
 
 	return (
-		<div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
+		<div className="md:min-h-screen  py-12 px-4 lg:px-8">
 			<div className="max-w-5xl mx-auto">
 				{/* Header */}
 				<div className="text-center mb-16 animate-fade-in">
-					<span className="inline-block  text-[#FAA419] text-[24px] font-semibold mb-3">
+					<span className="inline-block  text-[#FAA419] md:text-[24px] text-[18px] font-semibold mb-3">
 						Customers’ Review
 					</span>
-					<h2 className="text-[50px] font-bold text-[#002B45]">
+					<h2 className="md:text-[50px] text-[30px] font-bold text-[#002B45]">
 						What people say?
 					</h2>
 				</div>
 
 				{/* Slider Container */}
-				<div className="relative bg-white rounded-3xl border-gray-400 border-b-[2px] shadow-sm pb-20 overflow-hidden">
+				<div className="relative bg-white rounded-3xl border-gray-400 border-b-[2px] shadow-sm md:pb-20 pb-10 overflow-hidden">
 					{/* Previous Button */}
 					<button
 						onClick={prevSlide}
@@ -221,7 +221,7 @@ const TestimonialSlider = () => {
 
 					<div className="p-8 md:p-16 ">
 						{/* Slides */}
-						<div className="relative min-h-[500px]">
+						<div className="relative md:min-h-[500px] min-h-[400px]">
 							{testimonials.map((testimonial, index) => (
 								<div
 									key={index}
@@ -247,10 +247,10 @@ const TestimonialSlider = () => {
 											</div>
 											{/* Name and Role below video */}
 											<div className="text-center space-y-3">
-												<h3 className="text-[28px] leading-[33px] font-semibold">
+												<h3 className="md:text-[28px] md:leading-[33px] text-[20px] leading-[24px] font-semibold">
 													{testimonial.name}
 												</h3>
-												<p className="text-[#FAA419] font-medium text-[18px] leading-[32px] uppercase tracking-wide">
+												<p className="text-[#FAA419] font-medium md:text-[18px] md:leading-[32px] text-[14px] leading-[20px] uppercase tracking-wide">
 													{testimonial.role}
 												</p>
 											</div>
@@ -261,14 +261,14 @@ const TestimonialSlider = () => {
 										</div>
 									) : (
 										/* Text Testimonial */
-										<div className="flex flex-col items-center justify-center min-h-[450px] space-y-8">
+										<div className="flex flex-col items-center justify-center md:min-h-[450px] min-h-[350px] space-y-8">
 											{/* Stars before text */}
 											<div className="flex gap-1">
 												{renderStars(testimonial.rating)}
 											</div>
 											{/* Quote */}
 											<div className="relative max-w-3xl">
-												<p className="text-[24px] text-[#002B45] leading-[45px] text-center px-8">
+												<p className="md:text-[24px] text-[18px] text-[#002B45] md:leading-[45px] leading-[28px] text-center px-8">
 													{testimonial.text}
 												</p>
 											</div>
@@ -302,7 +302,7 @@ const TestimonialSlider = () => {
 											</>
 										)}
 										{/* Dots Indicator */}
-										<div className="flex gap-2 justify-center">
+										<div className="flex gap-2 pt-5 lg:pt-0 justify-center">
 											{testimonials.map((_, index) => (
 												<div
 													key={index}

@@ -3,14 +3,15 @@ import sectionOne from '../../../assets/images/lpg.jpg';
 
 export default function SectionOne() {
 	return (
-		<div className="max-w-[1100px] mx-auto  my-[46px]">
+		<div className="max-w-[1100px] mx-auto my-8 md:my-[46px] px-4 md:px-0">
 			<div>
 				<img
 					src={sectionOne}
 					alt=""
+					className="lg:w-full lg:h-auto h-[300px] object-cover"
 				/>
 
-				<p className="text-[#FAA419] text-[30px] font-extrabold leading-[42px] pt-[39px]">
+				<p className="text-[#FAA419] text-[20px] md:text-[30px] lg:leading-[42px] pt-6 md:pt-[39px]">
 					LPG Storage & Distribution Terminal Lagos (2016)
 				</p>
 			</div>

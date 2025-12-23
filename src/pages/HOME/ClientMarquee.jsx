@@ -30,10 +30,10 @@ const ClientMarquee = () => {
 
 	return (
 		<div>
-			<h1 className="text-[#002B45] text-[50px] font-semibold pt-[200px] text-center leading-[60px]">
+			<h1 className="text-[#002B45] md:text-[50px] text-[18px] font-semibold md:pt-[200px] pt-[50px] text-center leading-[60px]">
 				Our Clients
 			</h1>
-			<div className="w-full bg-white py-[150px] mt-[64px] mb-[200px] overflow-hidden relative">
+			<div className="w-full bg-white md:py-[150px] py-[60px] mt-[64px] md:mb-[200px] mb-[100px] overflow-hidden relative">
 				{/* Top border */}
 				<div className="absolute top-0 left-0 w-full h-[1px] flex">
 					<div className="w-1/2 bg-[#002B45]"></div>

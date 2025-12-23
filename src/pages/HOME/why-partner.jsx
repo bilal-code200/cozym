@@ -20,24 +20,27 @@ const WhyPartnerWithCozym = () => {
 	];
 
 	return (
-		<div className="bg-[#002B45] min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-[140px]">
-			<div className="max-w-[1370px] px-[100px]  mx-auto">
+		<div className="bg-[#002B45] min-h-screen flex items-center justify-center   md:py-[140px] py-[70px]">
+			<div className="max-w-[1370px] md:px-[100px] px-5   mx-auto">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 					{/* Left Side - Image */}
 					<div className="relative">
 						<img
 							src={homeWhy}
 							alt="Why Partner with Cozym"
-							className="w-full h-auto object-cover rounded-lg shadow-xl"
+							className="w-full md:h-auto  object-cover rounded-lg shadow-xl"
 						/>
 					</div>
 
 					{/* Right Side - Content */}
 					<div className="text-white">
-						<h2 className="text-[48px] font-extrabold mb-8">
+						<h2 className="md:text-[48px] md:block hidden text-[16px] font-extrabold mb-8">
 							<span className="text-[#FAA419]">Why Partner With</span>
 							<br />
 							<span className="text-[#FAA419]">Cozym?</span>
+						</h2>
+						<h2 className="md:text-[48px] block md:hidden text-[16px] font-extrabold mb-8">
+							<span className="text-[#FAA419]">Why Partner With Cozym?</span>
 						</h2>
 
 						{/* Features List */}
@@ -48,7 +51,7 @@ const WhyPartnerWithCozym = () => {
 									className="flex items-start gap-3"
 								>
 									<Check className="w-5 h-5 text-[#FAA419] flex-shrink-0 mt-0.5" />
-									<p className="text-[#FFFFFF] font-medium text-[16px] leading-[28px]">
+									<p className="text-[#FFFFFF] font-medium md:text-[16px] text-[14px] leading-[28px]">
 										{feature.text}
 									</p>
 								</div>
@@ -58,7 +61,7 @@ const WhyPartnerWithCozym = () => {
 						{/* CTA Button */}
 						<Link
 							to="/projects/lpg"
-							className="bg-[#FAA419] hover:bg-[#ffa30e] text-white  text-[14px] leading-[30px] font-bold px-[50px] py-3.5 rounded-md transition-all duration-200 shadow-lg hover:shadow-xl inline-block"
+							className="bg-[#FAA419] hover:bg-[#ffa30e] text-white  text-[14px] leading-[30px] font-bold md:px-[50px] px-[25px] md:py-3.5 py-2.5 rounded-md transition-all duration-200 shadow-lg hover:shadow-xl inline-block"
 						>
 							Discover More
 						</Link>

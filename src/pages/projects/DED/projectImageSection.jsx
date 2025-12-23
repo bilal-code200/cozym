@@ -26,28 +26,28 @@ export default function ProjectsImageSection() {
 	}, []);
 
 	return (
-		<div className=" max-w-[1200px] mx-auto flex flex-col items-center py-12">
+		<div className="max-w-[1200px] mx-auto flex flex-col items-center py-8 md:py-12 px-4 md:px-0">
 			{/* LABEL */}
-			<p className="text-[24px] leading-[36px] text-[#EEC044] mb-1">
+			<p className="text-lg md:text-[24px] leading-[36px] text-[#EEC044] mb-1">
 				Images from
 			</p>
 
 			{/* TITLE */}
-			<h2 className="text-[32px] font-extrabold text-[#002B45] mb-[110px]">
+			<h2 className="text-xl md:text-[32px] font-extrabold text-[#002B45] mb-16 md:mb-[110px]">
 				The Projects
 			</h2>
 
 			{/* SLIDER */}
-			<div className="relative w-full mb-[80px]">
+			<div className="relative w-full mb-12 md:mb-[80px]">
 				<div className="relative w-full flex justify-center overflow-hidden">
 					{/* Slide */}
-					<div className="flex gap-8 transition-opacity duration-700 ease-in-out opacity-100">
+					<div className="flex flex-col md:flex-row gap-4 md:gap-8 transition-opacity duration-700 ease-in-out opacity-100">
 						{slides[index].map((img, i) => (
 							<img
 								key={i}
 								src={img}
 								alt="project"
-								className=""
+								className="w-full md:w-auto h-auto"
 							/>
 						))}
 					</div>
@@ -61,8 +61,12 @@ export default function ProjectsImageSection() {
 						key={i}
 						onClick={() => setIndex(i)}
 						className={`cursor-pointer rounded-full transition-all
-              ${i === index ? 'bg-[#072D52] w-10 h-3' : 'bg-[#d9a63f] w-3 h-3'}
-            `}
+	             ${
+									i === index
+										? 'bg-[#072D52] w-8 md:w-10 h-2 md:h-3'
+										: 'bg-[#d9a63f] w-2 md:w-3 h-2 md:h-3'
+								}
+	           `}
 					></div>
 				))}
 			</div>

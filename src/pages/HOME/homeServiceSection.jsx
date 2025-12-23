@@ -130,7 +130,7 @@ export default function HomeServiceSection() {
 				backgroundRepeat: 'no-repeat',
 			}}
 		>
-			<div className="max-w-[1370px] mx-auto lg:px-[100px] px-[16px]">
+			<div className="max-w-[1370px] mx-auto lg:px-[100px] px-5">
 				<div className=" mb-[42px]">
 					<p className="lg:text-[36px] text-[20px] lg:leading-[43px] leading-[23px] font-semibold text-[#002B45] inline-block">
 						Our Services

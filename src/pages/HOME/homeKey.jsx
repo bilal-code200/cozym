@@ -16,7 +16,7 @@ export default function HomeKey() {
 
 	return (
 		<section
-			className="   bg-cover bg-center flex  lg:px-[170px] px-[16px] lg:pt-0  pb-[60px]  "
+			className="   bg-cover bg-center flex  lg:px-[170px] px-5 lg:pt-0  pb-[60px]  "
 			style={{
 				backgroundImage: `url(${Bg})`,
 			}}
